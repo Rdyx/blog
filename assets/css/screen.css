@@ -20,6 +20,7 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 10. Subscribe Overlay
 11. Site Footer
+12. Personnal
 
 */
 
@@ -196,7 +197,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: 40px;
     font-size: 1.2rem;
 }
@@ -205,7 +206,7 @@ body {
     display: flex;
     align-items: center;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
     padding-bottom: 80px;
@@ -1925,4 +1926,13 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+
+/* 12. Personnal
+/* ---------------------------------------------------------- */
+.nav li a.dropdown-item {
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
