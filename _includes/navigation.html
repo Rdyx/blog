@@ -4,7 +4,7 @@
     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tags
     </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       {% for tag in site.tags %}
         <a id="{{ tag[0] | slugify }}" class="dropdown-item" href="{{site.baseurl}}tag/{{ tag[0] | slugify }}" style="cursor: pointer;">{{ tag | first }}</a>
       {% endfor %}
