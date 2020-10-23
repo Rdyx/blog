@@ -16,10 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/syntax.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/style.css" />
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
 
     <!--[if IE]>
         <style>
@@ -92,23 +90,22 @@
         </div>
     {% endif %}
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
+    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript" src="{{ site.baseurl }}assets/js/prism.js"></script>
+    <!-- Line numbers for code blocks -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {      
+            document.querySelectorAll('pre[class*=language-]').forEach(function(node) {
+                node.classList.add('line-numbers');
+            });
+            Prism.highlightAll();
+        });
+    </script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
     <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->

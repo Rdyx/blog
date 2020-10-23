@@ -45,6 +45,10 @@ em {
     color: color(var(--white) l(-5%)) !important;
 }
 
+dl,dd,dt {
+  color: var(--white);
+}
+
 table {
   background-color: var(--background-grey) !important;
 }
@@ -64,6 +68,10 @@ hr::after {
 
 input, button, select, textarea {
   background-color: var(--background-grey);
+}
+
+figure {
+  font-size: 1.5rem;
 }
 
 figure.image img {
@@ -129,6 +137,15 @@ figure.image figcaption {
 #subscribe button, .subscribe-form button {
   background: linear-gradient(var(--yellow-link), var(--yellow-link-hover));
 }
+
+/* Code blocks */
+figure .toolbar-item {
+  margin-right: 1rem;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: var(--background-grey) !important;
+}
 /* ---------- */
 
 
@@ -182,6 +199,8 @@ nav .dropdown-menu a.dropdown-item {
 
 nav .dropdown-menu.show {
   background-color: var(--background-dark-grey);
+  max-height: 20rem;
+  overflow-y: auto;
 }
 
 nav .dropdown-item:focus, .dropdown-item {
@@ -282,6 +301,14 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 
 .progress::-webkit-progress-value{
   background-color:var(--yellow-link);
+}
+
+.post-full-meta {
+  color: var(--white);
+}
+
+.post-full-meta span {
+  color: var(--lightgrey);
 }
 
 .post-full-meta-date {
