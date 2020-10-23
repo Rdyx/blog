@@ -23,7 +23,7 @@ navigation: True
                     {% if tag_description %}
                         {{ tag_description }}
                     {% elsif page.tag %}
-                        A collection of {{ paginator.total_posts }} posts
+                        {{ paginator.total_posts }} {{ site.data.languages.fr["tag-layout"].default-tag-text }}
                     {% endif %}
                 </h2>
             </div>

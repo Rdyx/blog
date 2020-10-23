@@ -1,14 +1,35 @@
+
+default-layout:
+  powered-by: "Créé avec"
+  latest-posts: "Derniers posts"
+  subscribe-to: "S'abonner à"
+  subscribe-text: "Restez à jour ! Recevez les derniers posts de ce blog directement dans votre boîte mail"
+
+error-layout:
+  not-found: "Oups! Page non trouvée..."
+  back-to-front: "Retour à l'accueil"
+
+post-layout:
+  subscribe-to: "S'abonner à"
+  subscribe-text: "Recevez les derniers posts de ce blog directement dans votre boîte mail"
+  read-more: "Lire plus"
+  share: "Partager"
+  read-more-from-author: "Lire plus d'articles de cet auteur"
+
+tag-layout:
+  default-tag-text: "article(s) sur ce thème"
+
 navigation:
   home: "Accueil"
   tags: "Thèmes"
   about: "A propos"
-
-posts:
-  read-more: "Lire plus"
-  share: "Partager"
 
 post-cards:
   read-time: "min de lecture"
 
 pagination:
   text-between-pages-numbers: "sur"
+
+subscribe:
+  mail-placeholder: "votre-email@exemple.com"
+  sub-button-text: "S'abonner"

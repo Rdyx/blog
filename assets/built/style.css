@@ -66,6 +66,19 @@ input, button, select, textarea {
   background-color: var(--background-grey);
 }
 
+figure.image img {
+  margin-bottom: 0;
+}
+
+figure.image figcaption {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--white);
+  text-align: center;
+}
+
 .home-template, .paged.archive-template, .error-template {
   background-color: var(--background-grey);
 }
@@ -74,19 +87,13 @@ input, button, select, textarea {
   font-size: 1.3rem;
 }
 
-.older-posts {
+.older-posts, .newer-posts {
+  border: 1px solid var(--lightgrey);
   color: var(--yellow-link) !important;
 }
 
-.older-posts:hover {
-  color: var(--yellow-link-hover) !important;
-}
-
-.newer-posts {
-  color: var(--yellow-link) !important;
-}
-
-.newer-posts:hover {
+.older-posts:hover, .newer-posts:hover {
+  border: 1px solid var(--white);
   color: var(--yellow-link-hover) !important;
 }
 
@@ -106,14 +113,42 @@ input, button, select, textarea {
 #site-main > div > section > a:hover {
   color: var(--yellow-link-hover) !important;
 }
+
+.subscribe-form {
+  background: var(--background-dark-grey);
+}
+
+.subscribe-form p {
+  color: var(--lightgrey);
+}
+
+#subscribe .subscribe-email, .subscribe-form .subscribe-email {
+  border: 1px solid var(--lightgrey) !important;
+}
+
+#subscribe button, .subscribe-form button {
+  background: linear-gradient(var(--yellow-link), var(--yellow-link-hover));
+}
 /* ---------- */
 
 
 /* ---------- */
 /* Pagination */
-/* Overriding bootstrap's .pagination justify-content */
+/* Overriding bootstrap */
 .pagination {
   justify-content: center;
+  color: var(--white);
+  border-top: 1px solid var(--white);
+}
+
+.pagination::before {
+  border: 1px solid var(--background-grey);
+  background: var(--white);
+  box-shadow: 0 0 0 5px var(--white);
+}
+
+.form-group {
+  margin-bottom: 0;
 }
 /* ---------- */
 
@@ -163,6 +198,10 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 /* Post cards */
 .post-card {
   box-shadow: 8px 14px 38px rgba(255,255,255,0.06), 1px 3px 8px rgba(255,255,255,0.23);
+}
+
+.post-card-content-link {
+  padding: 25px 25px 0 !important;
 }
 
 .post-card-content-text {
@@ -287,7 +326,7 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 }
 
 .author-card-content p {
-  color: var(--lightgrey) !important;
+  color: var(--white) !important;
 }
 
 .author-card-button {

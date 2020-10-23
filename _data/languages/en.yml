@@ -1,15 +1,35 @@
 # This file is here mostly to "remember" base texts and prevent an eventual futur multilanguages blog...
+default-layout:
+  powered-by: "Créé avec"
+  latest-post: "Latest Posts"
+  subscribe-to: "Subscribe to"
+  subscribe-text: "Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox"
+
+error-layout:
+  not-found: "Oops! Page not found..."
+  back-to-front: "Go to the front page"
+
+post-layout:
+  subscribe-to: "Subscribe to"
+  subscribe-text: "Get the latest posts delivered right to your inbox"
+  read-more: "Read more"
+  share: "Share this"
+  read-more-from-author: "Read more posts by this author"
+
+tag-layout:
+  default-tag-text: "post(s) with this tag"
+
 navigation:
   home: "Home"
   tags: "Tags"
   about: "About"
-
-posts:
-  read-more: "Read more"
-  share: "Share this"
 
 post-cards:
   read-time: "min read"
 
 pagination:
   text-between-pages-numbers: "of"
+
+subscribe:
+  mail-placeholder: "youremail@example.com"
+  sub-button-text: "Subscribe"

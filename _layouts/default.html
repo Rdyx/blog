@@ -61,11 +61,12 @@
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
-                <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <section class="poweredby">{{ site.data.languages.fr["default-layout"].powered-by }} <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
                 <nav class="site-footer-nav">
-                    <a href="{{ site.baseurl }}">Latest Posts</a>
+                    <a href="{{ site.baseurl }}">{{ site.data.languages.fr["default-layout"].latest-posts }}</a>
                     {% if site.facebook %}<a href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
                     {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
                     {% if site.github %}<a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">Github</a>{% endif %}
@@ -84,9 +85,9 @@
                 {% if site.logo %}
                     <img class="subscribe-overlay-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
                 {% endif %}
-                <h1 class="subscribe-overlay-title">Subscribe to {{ site.title }}</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                {% include subscribe-form.html placeholder="youremail@example.com" %}
+                <h1 class="subscribe-overlay-title">{{ site.data.languages.fr["default-layout"].subscribe-to }} {{ site.title }}</h1>
+                <p class="subscribe-overlay-description">{{ site.data.languages.fr["default-layout"].subscribe-text }}</p>
+                {% include subscribe-form.html %}
             </div>
         </div>
     {% endif %}
