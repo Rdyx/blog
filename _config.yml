@@ -24,6 +24,7 @@ subscribers: False # you need to connect an external service for this to work,
 # by editing `_includes/subscribe-form.html`
 twitter: RdyxTV # replace by your username
 facebook: RdyxTV # replace by your username
+github: Rdyx # replace by your username
 
 # Disqus
 disqus: False
