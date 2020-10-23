@@ -50,7 +50,7 @@ em {
 }
 
 .post-card-excerpt p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .older-posts {
@@ -166,6 +166,7 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 
 .post-full-content {
   border-radius: 5px;
+  padding: 5vw 7vw;
 }
 
 .post-full-content blockquote {
