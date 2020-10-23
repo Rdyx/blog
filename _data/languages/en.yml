@@ -1,0 +1,15 @@
+# This file is here mostly to "remember" base texts and prevent an eventual futur multilanguages blog...
+navigation:
+  home: "Home"
+  tags: "Tags"
+  about: "About"
+
+posts:
+  read-more: "Read more"
+  share: "Share this"
+
+post-cards:
+  read-time: "min read"
+
+pagination:
+  text-between-pages-numbers: "of"

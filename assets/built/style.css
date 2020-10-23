@@ -45,7 +45,28 @@ em {
     color: color(var(--white) l(-5%)) !important;
 }
 
-.home-template, .paged.archive-template {
+table {
+  background-color: var(--background-grey) !important;
+}
+
+table th {
+  color: inherit !important;
+  background-color: var(--background-grey) !important;
+}
+
+table td:first-child, table td:last-child {
+  background-image: none !important;
+}
+
+hr::after {
+  box-shadow: none !important;
+}
+
+input, button, select, textarea {
+  background-color: var(--background-grey);
+}
+
+.home-template, .paged.archive-template, .error-template {
   background-color: var(--background-grey);
 }
 
@@ -66,6 +87,23 @@ em {
 }
 
 .newer-posts:hover {
+  color: var(--yellow-link-hover) !important;
+}
+
+.error-code {
+  color: var(--yellow-link) !important;
+  opacity: 1;
+}
+
+.error-description {
+  color: var(--lightgrey) !important;
+}
+
+.error-link {
+  color: var(--yellow-link);
+}
+
+#site-main > div > section > a:hover {
   color: var(--yellow-link-hover) !important;
 }
 /* ---------- */
@@ -123,8 +161,16 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 
 /* ---------- */
 /* Post cards */
-.post-card.home-template, .post-card.post-template, .post-card.author-template, .post-card.tag-template {
+.post-card {
   box-shadow: 8px 14px 38px rgba(255,255,255,0.06), 1px 3px 8px rgba(255,255,255,0.23);
+}
+
+.post-card-content-text {
+  padding: 0 25px 0;
+}
+
+.post-card-content-text-link:hover {
+  text-decoration: none;
 }
 
 .post-card-title, .post-card-excerpt {
@@ -184,7 +230,7 @@ nav .dropdown-item:focus, .dropdown-item:hover {
   color: var(--white);
 }
 
-.page-template .site-main, .post-template .site-main {
+.page-template .site-main, .post-template .site-main, .error-template .site-main {
   color: var(--white);
   background-color: var(--background-grey);
 }

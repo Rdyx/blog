@@ -1,8 +1,8 @@
 <ul class="nav" role="menu">
-  <li class="nav-home" role="menuitem"><a href="{{site.baseurl}}">Home</a></li>
+  <li class="nav-home" role="menuitem"><a href="{{site.baseurl}}">{{ site.data.languages.fr["navigation"].home }}</a></li>
   <li class="nav-dropdown" role="menuitem">
     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Tags
+      {{ site.data.languages.fr["navigation"].tags }}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       {% for tag in site.tags %}
@@ -10,7 +10,7 @@
       {% endfor %}
     </div>
   </li>
-  <li class="nav-about" role="menuitem"><a href="{{site.baseurl}}about/">About</a></li>
+  <li class="nav-about" role="menuitem"><a href="{{site.baseurl}}about/">{{ site.data.languages.fr["navigation"].about }}</a></li>
   <div class="social-links">
     {% if site.facebook %}
       <a class="social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %}</a>

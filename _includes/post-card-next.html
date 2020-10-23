@@ -7,33 +7,44 @@
             </a>
         {% endif %}
         <div class="post-card-content">
-            <a class="post-card-content-link" href="{{ site.baseurl }}{{ page.next.url | remove_first: '/' }}">
-                <header class="post-card-header">
-                    {% if page.next.tags.size > 0 %}
-                        {% for tag in page.next.tags %}
-                            {% if forloop.index == page.next.tags.size %}
-                                <span class="post-card-tags">{{ tag | capitalize }}</span>
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
+                        {% if page.next.tags.size > 0 %}
+                            {% for tag in page.next.tags %}
+                                {% if forloop.index == post.tags.size %}
+                                    <a class="post-card-tags" href="{{site.baseurl}}tag/{{ tag | slugify }}">
+                                        <span>{{ tag | capitalize }}</span>
+                                    </a>
+                                {% else %}
+                                    <a class="post-card-tags" href="{{site.baseurl}}tag/{{ tag | slugify }}">
+                                        <span class="post-card-tags">{{ tag | capitalize }}</span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </header>
+                </div>
+                <div class="post-card-content-text">    
+                    <a class="post-card-content-text-link" href="{{ site.baseurl }}{{ page.next.url | remove_first: '/' }}">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">{{ page.next.title }}</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            {% if post.excerpt %}
+                                <p>{{ post.excerpt | strip_html | truncatewords: 33, "" }}...</p>
                             {% else %}
-                               <span class="post-card-tags">{{ tag | capitalize }}</span>
+                                <p>{{ post.content | strip_html | truncatewords: 33, "" }}</p>
                             {% endif %}
-                        {% endfor %}
-                    {% endif %}
-
-                    <h2 class="post-card-title">{{ page.next.title }}</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    {% if post.excerpt %}
-                        <p>{{ post.excerpt | strip_html | truncatewords: 33, "" }}...</p>
-                    {% else %}
-                        <p>{{ post.content | strip_html | truncatewords: 33, "" }}...</p>
-                    {% endif %}
-                </section>
-            </a>
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 {% for author in site.data.authors %}
                     {% if author[1].username == page.next.author %}
                         {% if author[1].picture %}
-                        <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ author[1].name }}" />
+                            <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ author[1].name }}" />
                         {% endif %}
                         <span class="post-card-author">
                             <a href="{{ site.baseurl }}author/{{ page.next.author }}/">{{ author[1].name }}</a>
@@ -43,9 +54,9 @@
                 <span class="reading-time">
                     {% assign words = post.content | strip_html | number_of_words %}
                     {% if words <= words_per_minute %}
-                      ~1 min read
+                        ~1 {{ site.data.languages.fr["post-cards"].read-time }}
                     {% else %}
-                      ~{{ words | divided_by:words_per_minute }} min read
+                        ~{{ words | divided_by:words_per_minute }} {{ site.data.languages.fr["post-cards"].read-time }}
                     {% endif %}
                 </span>
             </footer>

@@ -26,7 +26,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="{{ page.date | date:'%e %B %Y' }}">{{ page.date | date:'%e %B %Y' }}</time>
+                    <time class="post-full-meta-date" datetime="{{ page.date | date:'%e %B %Y' }}">{% include date-fr.html date=page.date %}</time>
                     {% if page.tags.size > 0 %}
                         <span class="date-divider">/</span>
                         {% for tag in page.tags %}
@@ -39,6 +39,9 @@ into the {body} of the default.hbs template -->
                     {% endif %}
                 </section>
                 <h1 class="post-full-title">{{ page.title }}</h1>
+                {% if page.edit-date %}
+                    <small>Last edited: {% include date-fr.html date=page.date %}</small>
+                {% endif %}
             </header>
 
             {% if page.cover %}
@@ -80,7 +83,7 @@ into the {body} of the default.hbs template -->
                             </section>
                         </section>
                         <div class="post-full-footer-right">
-                            <a class="author-card-button" href="{{ site.baseurl }}author/{{ page.author }}">Read More</a>
+                            <a class="author-card-button" href="{{ site.baseurl }}author/{{ page.author }}">{{site.data.languages.fr["read-more"]}}Read More</a>
                         </div>
                     {% endif %}
                 {% endfor %}

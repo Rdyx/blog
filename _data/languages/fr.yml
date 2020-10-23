@@ -1,0 +1,14 @@
+navigation:
+  home: "Accueil"
+  tags: "Thèmes"
+  about: "A propos"
+
+posts:
+  read-more: "Lire plus"
+  share: "Partager"
+
+post-cards:
+  read-time: "min de lecture"
+
+pagination:
+  text-between-pages-numbers: "sur"

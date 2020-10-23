@@ -1,13 +1,13 @@
 <nav class="pagination" role="pagination">
     {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-            <a class="newer-posts" href="{{ site.baseurl }}" title="Previous Page">&laquo; Newer Posts</a>
+            <a class="newer-posts" href="{{ site.baseurl }}" title="Previous Page">&laquo; Page {{ paginator.page | minus:'1' }}</a>
         {% else %}
-            <a class="newer-posts" href="{{ site.baseurl }}page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Newer Posts</a>
+            <a class="newer-posts" href="{{ site.baseurl }}page{{ paginator.previous_page }}/" title="Previous Page">&laquo; {{ paginator.page | minus:'1' }}</a>
       {% endif %}
     {% endif %}
-    <span class="page-number"> Page {{ paginator.page }} of {{ paginator.total_pages }} </span>
+    <span class="page-number"> Page {{ paginator.page }} {{ site.data.languages.fr["pagination"].text-between-pages-numbers }} {{ paginator.total_pages }} </span>
     {% if paginator.next_page %} 
-        <a class="older-posts" href="{{ site.baseurl }}page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
+        <a class="older-posts" href="{{ site.baseurl }}page{{ paginator.next_page }}/" title="Next Page">Page {{ paginator.page | plus:'1' }} &raquo;</a>
     {% endif %} 
 </nav>
