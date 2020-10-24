@@ -211,6 +211,19 @@ nav .dropdown-item:focus, .dropdown-item {
 nav .dropdown-item:focus, .dropdown-item:hover {
   background-color: var(--background-grey);
 }
+
+nav ul li {
+  align-self: center;
+}
+
+nav ul li a.dropdown-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-link svg path {
+  stroke: var(--white);
+}
 /* ---------- */
 
 

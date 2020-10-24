@@ -18,7 +18,7 @@ subclass: 'post page'
     {% assign postsList = tag[1] | sort: 'title' %}
     {% for post in postsList %}
       <li style="padding-left: 1.5rem; line-height: 1.5rem !important;">
-        <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a> - 
+        <a href="{{ site.baseurl }}{{ post.url | replace: '/' }}"><strong>{{ post.title }}</strong></a> - 
         <i>
           <small>
             {% if post.edit-date %}

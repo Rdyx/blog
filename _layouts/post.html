@@ -40,7 +40,7 @@ into the {body} of the default.hbs template -->
                 </section>
                 <h1 class="post-full-title">{{ page.title }}</h1>
                 {% if page.edit-date %}
-                    <small>{{ site.data.languages.fr["post-layout"].last-edit }} {% include date-fr.html date=page.date %}</small>
+                    <span>{{ site.data.languages.fr["post-layout"].last-edit }} {% include date-fr.html date=page.date %}</span>
                 {% endif %}
             </header>
 

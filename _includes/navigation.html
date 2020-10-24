@@ -5,8 +5,8 @@
       {{ site.data.languages.fr["navigation"].tags }}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a id="all-tags" class="dropdown-item" href="{{site.baseurl}}posts-list-by-tag">{{ site.data.languages.fr["navigation"].posts-list-by-tag }}</a>
-      <a id="all-tags" class="dropdown-item" href="{{site.baseurl}}posts-list-by-date">{{ site.data.languages.fr["navigation"].posts-list-by-date }}</a>
+      <a id="all-posts-by-tag" class="dropdown-item" href="{{site.baseurl}}posts-list-by-tag">{{ site.data.languages.fr["navigation"].posts-list-by-tag }}</a>
+      <a id="all-posts-by-date" class="dropdown-item" href="{{site.baseurl}}posts-list-by-date">{{ site.data.languages.fr["navigation"].posts-list-by-date }}</a>
       <div class="dropdown-divider"></div>
       {% for tag in site.tags %}
         <a id="{{ tag[0] | slugify }}" class="dropdown-item" href="{{site.baseurl}}tag/{{ tag[0] | slugify }}">{{ tag | first }}</a>
@@ -14,7 +14,21 @@
     </div>
   </li>
   <li class="nav-about" role="menuitem"><a href="{{site.baseurl}}about/">{{ site.data.languages.fr["navigation"].about }}</a></li>
-  <div class="social-links">
+  <li class="nav-social-links d-block d-sm-none" role="menuitem">
+    <a class="dropdown-toggle social-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% include website.html %}</a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      {% if site.facebook %}
+        <a class="dropdown-item social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %} {{ site.facebook }}</a>
+      {% endif %}
+      {% if site.twitter %}
+        <a class="dropdown-item social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">{% include twitter.html %} {{ site.twitter }}</a>
+      {% endif %}
+      {% if site.github %}
+        <a class="dropdown-item social-link" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %} {{ site.github }}</a>
+      {% endif %}
+    </div>
+  </li>
+  <div class="social-links d-none d-sm-flex">
     {% if site.facebook %}
       <a class="social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %}</a>
     {% endif %}
