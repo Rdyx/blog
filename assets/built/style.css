@@ -201,6 +201,7 @@ nav .dropdown-menu.show {
   background-color: var(--background-dark-grey);
   max-height: 20rem;
   overflow-y: auto;
+  border-radius: 5px;
 }
 
 nav .dropdown-item:focus, .dropdown-item {
@@ -263,13 +264,23 @@ nav .dropdown-item:focus, .dropdown-item:hover {
 
 /* ---------- */
 /* Post page */
+.no-image .post-full-content {
+  padding-top: 5vw;
+}
+
 .floating-header.floating-active {
   background-color: var(--background-dark-grey);
 }
 
 .post-full-content {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   border-radius: 5px;
   padding: 5vw 7vw;
+  font-size: 1.7rem;
+}
+
+.post-full-content small {
+  line-height: 1.7rem;
 }
 
 .post-full-content blockquote {

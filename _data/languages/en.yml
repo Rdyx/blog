@@ -15,6 +15,9 @@ post-layout:
   read-more: "Read more"
   share: "Share this"
   read-more-from-author: "Read more posts by this author"
+  last-edit: "Last edit:"
+  card-more-post-text: "Read more articles with this tag"
+  card-no-more-post-text: "No more article about this tag"
 
 tag-layout:
   default-tag-text: "post(s) with this tag"
@@ -23,6 +26,8 @@ navigation:
   home: "Home"
   tags: "Tags"
   about: "About"
+  posts-list-by-tag: "All posts by tag"
+  posts-list-by-date: "All posts by date"
 
 post-cards:
   read-time: "min read"

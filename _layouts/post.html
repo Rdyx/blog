@@ -40,7 +40,7 @@ into the {body} of the default.hbs template -->
                 </section>
                 <h1 class="post-full-title">{{ page.title }}</h1>
                 {% if page.edit-date %}
-                    <small>Last edited: {% include date-fr.html date=page.date %}</small>
+                    <small>{{ site.data.languages.fr["post-layout"].last-edit }} {% include date-fr.html date=page.date %}</small>
                 {% endif %}
             </header>
 
@@ -164,12 +164,10 @@ into the {body} of the default.hbs template -->
                         </div>
                         <footer class="read-next-card-footer">
                             <a href="{{ site.baseurl }}tag/{{ primary | slugify: "latin" }}/">
-                                {% if related_posts > 1 %}
-                                    See all {{ related_posts | minus: 1 }} posts  →
-                                {% elsif related_posts == 1 %}
-                                    {{ related_posts }} post  →
+                                {% if related_posts >= 1 %}
+                                    {{ site.data.languages.fr["post-layout"].card-more-post-text }} →
                                 {% else %}
-                                    No posts.
+                                    {{ site.data.languages.fr["post-layout"].card-no-more-post-text }}
                                 {% endif %}
                             </a>
                         </footer>

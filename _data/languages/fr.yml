@@ -15,6 +15,9 @@ post-layout:
   read-more: "Lire plus"
   share: "Partager"
   read-more-from-author: "Lire plus d'articles de cet auteur"
+  last-edit: "Dernière édition le"
+  card-more-post-text: "Lire plus d'articles sur ce thème"
+  card-no-more-post-text: "Pas d'autre article sur ce thème"
 
 tag-layout:
   default-tag-text: "article(s) sur ce thème"
@@ -23,6 +26,8 @@ navigation:
   home: "Accueil"
   tags: "Thèmes"
   about: "A propos"
+  posts-list-by-tag: "Tous les articles par thème"
+  posts-list-by-date: "Tous les articles par date"
 
 post-cards:
   read-time: "min de lecture"

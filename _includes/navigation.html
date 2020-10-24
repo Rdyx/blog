@@ -5,6 +5,9 @@
       {{ site.data.languages.fr["navigation"].tags }}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a id="all-tags" class="dropdown-item" href="{{site.baseurl}}posts-list-by-tag">{{ site.data.languages.fr["navigation"].posts-list-by-tag }}</a>
+      <a id="all-tags" class="dropdown-item" href="{{site.baseurl}}posts-list-by-date">{{ site.data.languages.fr["navigation"].posts-list-by-date }}</a>
+      <div class="dropdown-divider"></div>
       {% for tag in site.tags %}
         <a id="{{ tag[0] | slugify }}" class="dropdown-item" href="{{site.baseurl}}tag/{{ tag[0] | slugify }}">{{ tag | first }}</a>
       {% endfor %}
