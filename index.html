@@ -19,10 +19,8 @@
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.edited.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/syntax.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/style.css" />
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
 
     <!--[if IE]>
         <style>
@@ -122,12 +120,15 @@ into the {body} of the default.hbs template -->
         
         
             <ul class="nav" role="menu">
-  <li class="nav-home" role="menuitem"><a href="/blog/">Home</a></li>
+  <li class="nav-home" role="menuitem"><a href="/blog/">Accueil</a></li>
   <li class="nav-dropdown" role="menuitem">
     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Tags
+      Thèmes
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a id="all-tags" class="dropdown-item" href="/blog/posts-list-by-tag">Tous les articles par thème</a>
+      <a id="all-tags" class="dropdown-item" href="/blog/posts-list-by-date">Tous les articles par date</a>
+      <div class="dropdown-divider"></div>
       
         <a id="fiction" class="dropdown-item" href="/blog/tag/fiction">fiction</a>
       
@@ -141,7 +142,7 @@ into the {body} of the default.hbs template -->
       
     </div>
   </li>
-  <li class="nav-about" role="menuitem"><a href="/blog/about/">About</a></li>
+  <li class="nav-about" role="menuitem"><a href="/blog/about/">A propos</a></li>
   <div class="social-links">
     
       <a class="social-link social-link-fb" href="https://facebook.com/RdyxTV" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
@@ -159,8 +160,8 @@ into the {body} of the default.hbs template -->
 
         
     <!-- </div> -->
-    <!-- <div class="site-nav-right"> -->
-        <!-- <div class="social-links">
+    <!-- <div class="site-nav-right">
+        <div class="social-links">
             
                 <a class="social-link social-link-fb" href="https://facebook.com/RdyxTV" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 </a>
@@ -169,9 +170,9 @@ into the {body} of the default.hbs template -->
                 <a class="social-link social-link-tw" href="https://twitter.com/RdyxTV" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 </a>
             
-        </div> -->
-        <!--  -->
-    <!-- </div> -->
+        </div>
+         
+    </div> -->
 </nav>
 
     </div>
@@ -186,6 +187,7 @@ into the {body} of the default.hbs template -->
             
 
 
+
     <article class="post-card home-template">
         
             <a class="post-card-image-link" href="/blog/welcome">
@@ -193,26 +195,35 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/welcome">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/welcome">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Welcome to Ghost</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Hey! Welcome to Ghost, it’s great to have you :)
 
-                    <h2 class="post-card-title">Welcome to Ghost</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Hey! Welcome to Ghost, it’s great to have you :)
-
-</p>
-                    
-                </section>
-            </a>
+...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -220,12 +231,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      1 min read
+                        ~1 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -234,24 +247,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/the-editor">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">Using the Ghost editor</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost uses a language called Markdown to format text. When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/the-editor">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Using the Ghost editor</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Ghost uses a language called Markdown to format text. When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -259,12 +281,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      3 min read
+                        ~3 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -273,24 +297,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/using-tags">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">Organising your content with tags</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost has a single, powerful organisational taxonomy, called tags. It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/using-tags">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Organising your content with tags</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Ghost has a single, powerful organisational taxonomy, called tags. It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -298,12 +331,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      2 min read
+                        ~2 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -312,24 +347,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/managing-users">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">Managing Ghost users</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/managing-users">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Managing Ghost users</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -337,12 +381,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      1 min read
+                        ~1 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -351,24 +397,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/private-sites">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">Making your site private</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/private-sites">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Making your site private</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -376,12 +431,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      1 min read
+                        ~1 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -390,28 +447,39 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/advanced-markdown">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                               <span class="post-card-tags">Getting started</span>
+                                
+                                <a class="post-card-tags" href="/blog/tag/getting-started">
+                                    <span class="post-card-tags">Getting started</span>
+                                </a>
+                                
+                            
+                                
+                                    <a class="post-card-tags" href="/blog/tag/test">
+                                        <span>Test</span>
+                                    </a>
+                                
                             
                         
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/advanced-markdown">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Advanced Markdown tips</h2>
+                        </header>
+                        <section class="post-card-excerpt">
                             
-                                <span class="post-card-tags">Test</span>
+                                <p>There are lots of powerful things you can do with the Ghost editor If you've gotten pretty comfortable with all the basics of writing in Ghost, then you may enjoy some more advanced...</p>
                             
-                        
-                    
-
-                    <h2 class="post-card-title">Advanced Markdown tips</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>There are lots of powerful things you can do with the Ghost editor If you've gotten pretty comfortable with all the basics of writing in Ghost, then you may enjoy some more advanced</p>
-                    
-                </section>
-            </a>
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -426,12 +494,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      2 min read
+                        ~2 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -440,24 +510,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/themes">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Getting started</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">Setting up your own Ghost theme</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/themes">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Setting up your own Ghost theme</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -465,12 +544,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      1 min read
+                        ~1 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -479,24 +560,33 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/the-businessman-and-fisherman">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Fables</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/fables">
+                                        <span>Fables</span>
+                                    </a>
+                                
                             
                         
-                    
-
-                    <h2 class="post-card-title">The Businessman & The Fisherman</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to</p>
-                    
-                </section>
-            </a>
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/the-businessman-and-fisherman">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">The Businessman & The Fisherman</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -504,12 +594,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      2 min read
+                        ~2 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -518,20 +610,27 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/a-full-and-comprehensive-style-test">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
+                        
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/a-full-and-comprehensive-style-test">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">A Full and Comprehensive Style Test</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
-                    <h2 class="post-card-title">A Full and Comprehensive Style Test</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
-
-</p>
-                    
-                </section>
-            </a>
+...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -539,12 +638,14 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      5 min read
+                        ~5 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
+
 
     <article class="post-card home-template">
         
@@ -553,26 +654,35 @@ into the {body} of the default.hbs template -->
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/i-have-a-dream">
-                <header class="post-card-header">
-                    
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
                         
                             
-                                <span class="post-card-tags">Speeches</span>
+                                
+                                    <a class="post-card-tags" href="/blog/tag/speeches">
+                                        <span>Speeches</span>
+                                    </a>
+                                
                             
                         
-                    
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/i-have-a-dream">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">I Have a Dream</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
 
-                    <h2 class="post-card-title">I Have a Dream</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
-
-</p>
-                    
-                </section>
-            </a>
+...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
             <footer class="post-card-meta">
                 
                     
@@ -580,12 +690,13 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      8 min read
+                        ~8 min de lecture
                     
                 </span>
             </footer>
         </div>
     </article>
+
 
 
         </div>
@@ -599,9 +710,9 @@ into the {body} of the default.hbs template -->
             
                 <nav class="pagination" role="pagination">
     
-    <span class="page-number"> Page 1 of 2 </span>
+    <span class="page-number"> Page 1 sur 2 </span>
      
-        <a class="older-posts" href="/blog/page2/" title="Next Page">Older Posts &raquo;</a>
+        <a class="older-posts" href="/blog/page2/" title="Next Page">Page 2 &raquo;</a>
      
 </nav>
             
@@ -611,11 +722,12 @@ into the {body} of the default.hbs template -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="http://localhost:4000/blog/">Rdyx Blog</a> &copy; 2020</section>
-                <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <section class="poweredby">Créé avec <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
                 <nav class="site-footer-nav">
-                    <a href="/blog/">Latest Posts</a>
+                    <a href="/blog/">Derniers posts</a>
                     <a href="https://facebook.com/RdyxTV" target="_blank" rel="noopener">Facebook</a>
                     <a href="https://twitter.com/RdyxTV" target="_blank" rel="noopener">Twitter</a>
                     <a href="https://github.com/Rdyx" target="_blank" rel="noopener">Github</a>
@@ -629,23 +741,22 @@ into the {body} of the default.hbs template -->
     <!-- The big email subscribe modal content -->
     
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.5.1.js"></script>
+
+    <script type="text/javascript" src="/blog/assets/js/prism.js"></script>
+    <!-- Line numbers for code blocks -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {      
+            document.querySelectorAll('pre[class*=language-]').forEach(function(node) {
+                node.classList.add('line-numbers');
+            });
+            Prism.highlightAll();
+        });
+    </script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
     <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="/blog/assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->
