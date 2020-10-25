@@ -645,9 +645,9 @@ Juillet
             tocArrow.classList.toggle('rotated');        
             
             if (toc.classList.contains('expanded')) {
-                toc.style.height = '40px';
+                toc.style.maxHeight = '40px';
             } else {
-                toc.style.height = '250px';
+                toc.style.maxHeight = '250px';
             };
             
             toc.classList.toggle('expanded')
@@ -726,7 +726,7 @@ Juillet
                 header.classList.add('floating-active');
                 setElementVisibilityAndOpacity(toc, 'visible', '1');
                 setElementVisibilityAndOpacity(tocArrow, 'visible', '1');
-                setElementVisibilityAndOpacity(toTopArrow, 'visible', '1');
+                setElementVisibilityAndOpacity(toTopArrow, 'visible', '0.2');
             } else {
                 header.classList.remove('floating-active');
                 setElementVisibilityAndOpacity(toc, 'hidden', '0');
