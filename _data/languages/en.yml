@@ -18,6 +18,7 @@ post-layout:
   last-edit: "Last edit:"
   card-more-post-text: "Read more articles with this tag"
   card-no-more-post-text: "No more article about this tag"
+  toc-content-text: "Contents"
 
 tag-layout:
   default-tag-text: "post(s) with this tag"
