@@ -225,7 +225,6 @@ nav ul li a.dropdown-item {
   right: 10px;
   display: flex;
   flex-direction: column;
-  height: 40px;
   width: 25%;
   min-width: 0;
   padding: 0.5rem 1rem 0.5rem 3rem;
@@ -267,7 +266,7 @@ nav ul li a.dropdown-item {
   margin: auto;
   padding: 0;
   width: 30px;
-  height: 30px;
+  max-height: 250px;
   visibility: hidden;
   opacity: 0;
   text-align: center;
@@ -465,12 +464,17 @@ nav ul li a.dropdown-item {
 
 #to-top-arrow {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 8rem;
   bottom: 10px;
   right: 10px;
-  width: 45px;
-  height: 30px;
+  width: 10rem;
+  height: 10rem;
   transform: rotate(180deg);
   background-color: var(--background-dark-grey);
+  opacity: 0;
   border: 1px solid var(--yellow-link);
   border-radius: 5px;
   text-align: center;
@@ -481,27 +485,29 @@ nav ul li a.dropdown-item {
 #to-top-arrow:hover {
   color: var(--yellow-link);
   border: 1px solid var(--lightgrey);
-  /* ---------- */
-  
-  
-  
-  /* ---------- */
-  /* Author page */
-  .author-header-div {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--transparent-dark-bg);
-    border-radius: 5px;
-    padding: 1rem 3rem 0;
-  }
-  /* ---------- */
-  
-  
-  /* ---------- */
-  /* Tag page */
-  .tag-header-div {
-    background-color: var(--transparent-dark-bg);
-    border-radius: 5px;
-    padding: 0 3rem;
-  }
-  /* ---------- */
+  opacity: 1 !important;
+}
+/* ---------- */
+
+
+
+/* ---------- */
+/* Author page */
+.author-header-div {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--transparent-dark-bg);
+  border-radius: 5px;
+  padding: 1rem 3rem 0;
+}
+/* ---------- */
+
+
+/* ---------- */
+/* Tag page */
+.tag-header-div {
+  background-color: var(--transparent-dark-bg);
+  border-radius: 5px;
+  padding: 0 3rem;
+}
+/* ---------- */
