@@ -18,8 +18,8 @@ cover:  assets/images/welcome.jpg
   <ul class="list-unstyled" style="margin-bottom: 3rem;">
     {% assign postsList = tag[1] | sort: 'title' %}
     {% for post in postsList %}
-      <li style="padding-left: 1.5rem; line-height: 1.5rem !important;">
-        <a href="{{ site.baseurl }}{{ post.url | replace: '/' }}"><strong>{{ post.title }}</strong></a> - 
+      <li style="padding-left: 1.5rem;">
+        <a href="{{ site.baseurl }}/{{ post.url | replace: '/' }}"><strong>{{ post.title }}</strong></a> - 
         <i>
           <small>
             {% if post.edit-date %}

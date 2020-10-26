@@ -2,8 +2,8 @@
 
     <article class="post-card {{ page.next.class }}{% unless page.next.cover %} no-image{% endunless %}">
         {% if page.next.cover %}
-            <a class="post-card-image-link" href="{{ site.baseurl }}{{ page.next.url | remove_first: '/' }}">
-                <div class="post-card-image" style="background-image: url({{ site.baseurl }}{{ page.next.cover }})"></div>
+            <a class="post-card-image-link" href="{{ site.baseurl }}/{{ page.next.url | remove_first: '/' }}">
+                <div class="post-card-image" style="background-image: url({{ site.baseurl }}/{{ page.next.cover }})"></div>
             </a>
         {% endif %}
         <div class="post-card-content">
@@ -13,11 +13,11 @@
                         {% if page.next.tags.size > 0 %}
                             {% for tag in page.next.tags %}
                                 {% if forloop.index == post.tags.size %}
-                                    <a class="post-card-tags" href="{{site.baseurl}}tag/{{ tag | slugify }}">
+                                    <a class="post-card-tags" href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
                                         <span>{{ tag | capitalize }}</span>
                                     </a>
                                 {% else %}
-                                    <a class="post-card-tags" href="{{site.baseurl}}tag/{{ tag | slugify }}">
+                                    <a class="post-card-tags" href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
                                         <span class="post-card-tags">{{ tag | capitalize }}</span>
                                     </a>
                                 {% endif %}
@@ -26,7 +26,7 @@
                     </header>
                 </div>
                 <div class="post-card-content-text">    
-                    <a class="post-card-content-text-link" href="{{ site.baseurl }}{{ page.next.url | remove_first: '/' }}">
+                    <a class="post-card-content-text-link" href="{{ site.baseurl }}/{{ page.next.url | remove_first: '/' }}">
                         <header class="post-card-header">
                             <h2 class="post-card-title">{{ page.next.title }}</h2>
                         </header>
@@ -44,10 +44,10 @@
                 {% for author in site.data.authors %}
                     {% if author[1].username == page.next.author %}
                         {% if author[1].picture %}
-                            <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ author[1].name }}" />
+                            <img class="author-profile-image" src="{{ site.baseurl }}/{{ author[1].picture }}" alt="{{ author[1].name }}" />
                         {% endif %}
                         <span class="post-card-author">
-                            <a href="{{ site.baseurl }}author/{{ page.next.author }}/">{{ author[1].name }}</a>
+                            <a href="{{ site.baseurl }}/author/{{ page.next.author }}/">{{ author[1].name }}</a>
                         </span>
                     {% endif %}
                 {% endfor %}

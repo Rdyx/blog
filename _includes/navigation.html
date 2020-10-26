@@ -1,19 +1,19 @@
 <ul class="nav" role="menu">
-  <li class="nav-home" role="menuitem"><a href="{{site.baseurl}}">{{ site.data.languages.fr["navigation"].home }}</a></li>
+  <li class="nav-home" role="menuitem"><a href="{{ site.baseurl }}/">{{ site.data.languages.fr["navigation"].home }}</a></li>
   <li class="nav-dropdown" role="menuitem">
     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{ site.data.languages.fr["navigation"].tags }}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a id="all-posts-by-tag" class="dropdown-item" href="{{site.baseurl}}posts-list-by-tag">{{ site.data.languages.fr["navigation"].posts-list-by-tag }}</a>
-      <a id="all-posts-by-date" class="dropdown-item" href="{{site.baseurl}}posts-list-by-date">{{ site.data.languages.fr["navigation"].posts-list-by-date }}</a>
+      <a id="all-posts-by-tag" class="dropdown-item" href="{{ site.baseurl }}/posts-list-by-tag">{{ site.data.languages.fr["navigation"].posts-list-by-tag }}</a>
+      <a id="all-posts-by-date" class="dropdown-item" href="{{ site.baseurl }}/posts-list-by-date">{{ site.data.languages.fr["navigation"].posts-list-by-date }}</a>
       <div class="dropdown-divider"></div>
       {% for tag in site.tags %}
-        <a id="{{ tag[0] | slugify }}" class="dropdown-item" href="{{site.baseurl}}tag/{{ tag[0] | slugify }}">{{ tag | first }}</a>
+        <a id="{{ tag[0] | slugify }}" class="dropdown-item" href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}">{{ tag | first }}</a>
       {% endfor %}
     </div>
   </li>
-  <li class="nav-about" role="menuitem"><a href="{{site.baseurl}}about/">{{ site.data.languages.fr["navigation"].about }}</a></li>
+  <li class="nav-about" role="menuitem"><a href="{{ site.baseurl }}/about/">{{ site.data.languages.fr["navigation"].about }}</a></li>
   <li class="nav-social-links d-block d-sm-none" role="menuitem">
     <a class="dropdown-toggle social-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% include website.html %}</a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -39,4 +39,13 @@
       <a class="social-link" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %}</a>
     {% endif %}
   </div>
+  <li class="nav-search mb-3 mb-sm-0">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">{% include magnifying-glass.svg %}</span>
+      </div>
+      <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.." aria-describedby="basic-addon1">
+    </div>
+    <ul id="results-container" class="dropdown-menu show"></ul>
+    </li>
 </ul>

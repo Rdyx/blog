@@ -34,8 +34,8 @@ cover:  assets/images/welcome.jpg
   </h6>
   <ul class="list-unstyled" style="margin-bottom: 3rem;">
     {% for post in postDate.items %}
-      <li style="padding-left: 1.5rem; line-height: 1.5rem !important;">
-        <a href="{{ site.baseurl}}{{ post.url | replace: '/' }}">{{ post.title }}</a>
+      <li style="padding-left: 1.5rem;">
+        <a href="{{ site.baseurl }}/{{ post.url | replace: '/' }}">{{ post.title }}</a>
         {% assign postTagsArrayLength = post.tags | size %}
         {% unless postTagsArrayLength == 0 %}-{% endunless %}
         <i>
@@ -43,7 +43,7 @@ cover:  assets/images/welcome.jpg
             <!-- Preparing vars for loop -->
             {% assign lastPostTag = post.tags | last %}
             {% for tag in post.tags %}
-              <a href="{{ site.baseurl }}tag/{{ tag | slugify }}">{{ tag }}</a>
+              <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>
                 {% if postTagsArrayLength > 1 %}{% unless tag == lastPostTag %}, {% endunless %}{% endif %}
             {% endfor %}
           </small>

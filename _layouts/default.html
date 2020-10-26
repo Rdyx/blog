@@ -12,12 +12,16 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/syntax.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/prism.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/prism.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Encode Sans', sans-serif; }
+      </style>
 
     <!--[if IE]>
         <style>
@@ -58,13 +62,13 @@
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
+                <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
                 <section class="poweredby">{{ site.data.languages.fr["default-layout"].powered-by }} <a href="https://jekyllrb.com/">Jekyll</a>,
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
                 </section>
                 <nav class="site-footer-nav">
-                    <a href="{{ site.baseurl }}">{{ site.data.languages.fr["default-layout"].latest-posts }}</a>
+                    <a href="{{ site.baseurl }}/">{{ site.data.languages.fr["default-layout"].latest-posts }}</a>
                     {% if site.facebook %}<a href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
                     {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
                     {% if site.github %}<a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">Github</a>{% endif %}
@@ -81,7 +85,7 @@
             <a class="subscribe-overlay-close" href="#"></a>
             <div class="subscribe-overlay-content">
                 {% if site.logo %}
-                    <img class="subscribe-overlay-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
+                    <img class="subscribe-overlay-logo" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.title }}" />
                 {% endif %}
                 <h1 class="subscribe-overlay-title">{{ site.data.languages.fr["default-layout"].subscribe-to }} {{ site.title }}</h1>
                 <p class="subscribe-overlay-description">{{ site.data.languages.fr["default-layout"].subscribe-text }}</p>
@@ -90,9 +94,9 @@
         </div>
     {% endif %}
 
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.5.1.js"></script>
 
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/prism.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/prism.js"></script>
     <!-- Line numbers for code blocks -->
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {      
@@ -104,8 +108,8 @@
     </script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->
@@ -113,14 +117,14 @@
     <!-- <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
+    <script src="{{ site.baseurl }}/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
 
     {% if paginator.total_pages > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/infinitescroll.js"></script>
     {% endif %}
 
 
@@ -136,6 +140,19 @@
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
     <!-- ghost_foot -->
-
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/search-input-handler.js"></script>
+    <script type="text/javascript">
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.baseurl }}/search.json',
+            searchResultTemplate: '<li>\
+                <a class="dropdown-item search-link" href="{{ site.url }}{url}">\
+                    <span>{title}</span> <small>{tags}</small>\
+                </a>\
+            </li>'
+        });
+    </script>
 </body>
 </html>
