@@ -12,6 +12,25 @@
   --lightgrey: #c5d2d9;
 }
 
+/* ---------- */
+/* Grouping font handling override for casper ghost theme */
+body, html {
+  font-family: 'Encode Sans', sans-serif !important;
+}
+  .post-full-content {
+    font-family: 'Encode Sans', sans-serif !important;
+}
+figure .toolbar-item {
+  font-family: 'Encode Sans', sans-serif !important;
+}
+.post-card-excerpt {
+  font-family: 'Encode Sans', sans-serif !important;
+}
+.post-full-content h1, .post-full-content h2, .post-full-content h3, .post-full-content h4, .post-full-content h5, .post-full-content h6 {
+  font-family: 'Encode Sans', sans-serif !important;
+}
+/* ---------- */
+
 body, html {
   background-color: var(--background-grey);
   color: var(--white) !important;
@@ -131,8 +150,8 @@ figure.image figcaption {
 /* Code blocks */
 figure .toolbar-item {
   margin-right: 1rem;
-  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
 }
+
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background: var(--background-grey) !important;
 }
@@ -172,6 +191,8 @@ figure .toolbar-item {
 /* Site-nav bar */
 .nav {
   margin: auto;
+  margin-right: 0;
+  justify-content: space-evenly;
 }
 
 .nav li a:hover {
@@ -181,6 +202,12 @@ figure .toolbar-item {
 .site-nav {
   background-color: var(--transparent-dark-bg);
   border-radius: 5px;
+  padding: 0 1rem;
+  height: auto;
+}
+
+.site-nav-logo.mx-auto {
+  align-self: center;
 }
 
 nav .dropdown-menu a.dropdown-item {
@@ -213,6 +240,69 @@ nav ul li a.dropdown-item {
 
 .social-link svg path {
   stroke: var(--white);
+}
+
+.nav-dropdown.show .dropdown-menu.show {
+  z-index: 10;
+}
+
+.nav-search.show .dropdown-menu.show {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+nav .nav-search {
+  align-self: center;
+}
+
+nav .input-group-text {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  opacity: 0.8;
+}
+
+nav #search-input {
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding: 0 1rem;
+  min-width: 180px;
+  height: 25px;
+  align-self: center;
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+
+nav #search-input:focus {
+  border: 1px solid var(--yellow-link);
+  box-shadow: none;
+  opacity: 1;
+}
+
+nav #search-input::placeholder {
+  color: var(--white);
+}
+
+nav #results-container {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+nav.site-nav .search-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling magnifying glass svg */
+nav .magnifying-glass {
+  height: 1.5rem;
+  color: white;
+  stroke: white;
+  fill: white;
+  stroke-width: 1rem;
 }
 /* ---------- */
 
@@ -270,7 +360,7 @@ nav ul li a.dropdown-item {
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  color: var(--lightgrey);
+  color: var(--white);
   background-color: var(--background-grey);
   border: 1px solid var(--yellow-link);
   border-radius: 30px;
@@ -360,7 +450,6 @@ nav ul li a.dropdown-item {
 }
 
 .post-full-content {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   border-radius: 5px;
   padding: 5vw 7vw;
   font-size: 1.7rem;

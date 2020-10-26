@@ -181,15 +181,6 @@
   
     
       <url>
-        <loc>/about/</loc>
-        
-        
-        <changefreq>weekly</changefreq>
-      </url>
-    
-  
-    
-      <url>
         <loc>/posts-list-by-date/</loc>
         
         
@@ -200,6 +191,24 @@
     
       <url>
         <loc>/posts-list-by-tag/</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/about/</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/search.json</loc>
         
         
         <changefreq>weekly</changefreq>
