@@ -13,4 +13,5 @@ input.addEventListener('input', (evt) => toggleResultsContainerVisibility(evt.ta
 // Trigger when user click on input
 input.addEventListener('focus', (evt) => toggleResultsContainerVisibility(evt.target.value));
 // Trigger when user click out of input
-input.addEventListener('focusout', () => hideResultsContainer());
+// Timeout is there to prevent clicked link to disappear before user being redirected after click
+input.addEventListener('focusout', () => setTimeout(hideResultsContainer, 25));
