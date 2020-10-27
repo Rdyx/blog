@@ -11,10 +11,10 @@ baseurl: /blog
 # Website info
 title: Rdyx Blog
 description:
-cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
-logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
+cover: assets/images/common/blog-cover.jpg
+logo: assets/images/common/blog-icon.png
+logo_dark: assets/images/common/favicon.png
+common/favicon: assets/images/common/favicon.png
 CNAME: #add cname for website to be created
 
 # Social info

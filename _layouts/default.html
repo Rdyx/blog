@@ -18,10 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Encode Sans', sans-serif; }
-      </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
 
     <!--[if IE]>
         <style>
@@ -151,7 +148,8 @@
                 <a class="dropdown-item search-link" href="{{ site.url }}{url}">\
                     <span>{title}</span> <small>{tags}</small>\
                 </a>\
-            </li>'
+            </li>',
+            noResultsText: '<li><span class="text-white ml-3">{{ site.data.languages.fr["default-layout"].no-search-result }}</span></li>'
         });
     </script>
 </body>

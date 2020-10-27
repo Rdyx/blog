@@ -4,6 +4,7 @@ default-layout:
   latest-post: "Latest Posts"
   subscribe-to: "Subscribe to"
   subscribe-text: "Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox"
+  no-search-result: "No results found"
 
 error-layout:
   not-found: "Oops! Page not found..."
@@ -29,6 +30,7 @@ navigation:
   about: "About"
   posts-list-by-tag: "All posts by tag"
   posts-list-by-date: "All posts by date"
+  search-placeholder: "Search blog posts..."
 
 post-cards:
   read-time: "min read"

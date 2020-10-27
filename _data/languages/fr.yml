@@ -4,6 +4,7 @@ default-layout:
   latest-posts: "Derniers posts"
   subscribe-to: "S'abonner à"
   subscribe-text: "Restez à jour ! Recevez les derniers posts de ce blog directement dans votre boîte mail"
+  no-search-result: "Aucun résultat"
 
 error-layout:
   not-found: "Oups! Page non trouvée..."
@@ -29,6 +30,7 @@ navigation:
   about: "A propos"
   posts-list-by-tag: "Tous les articles par thème"
   posts-list-by-date: "Tous les articles par date"
+  search-placeholder: "Rechercher des articles..."
 
 post-cards:
   read-time: "min de lecture"

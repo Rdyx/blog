@@ -3,7 +3,7 @@ layout: post
 current: posts-list-by-date
 title: Liste de tous les articles par date
 navigation: true
-logo: 'assets/images/blog-icon.png'
+logo: 'assets/images/common/blog-icon.png'
 class: post-template
 subclass: 'post page'
 cover:  assets/images/welcome.jpg
