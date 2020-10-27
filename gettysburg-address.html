@@ -21,10 +21,7 @@
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Encode Sans', sans-serif; }
-      </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
 
     <!--[if IE]>
         <style>
@@ -39,7 +36,7 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="" />
-    <link rel="shortcut icon" href="/blog/assets/images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/blog/" type="image/png" />
     <link rel="canonical" href="/blog/gettysburg-address" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -73,7 +70,7 @@
     "publisher": {
         "@type": "Organization",
         "name": "Rdyx Blog",
-        "logo": "/blog/assets/images/blog-icon.png"
+        "logo": "/blog/assets/images/common/blog-icon.png"
     },
     "url": "/blog/gettysburg-address",
     "image": {
@@ -112,13 +109,13 @@
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
-<header class="site-header outer " style="background-image:  url(/blog/assets/images/blog-cover.jpg) ">
+<header class="site-header outer " style="background-image:  url(/blog/assets/images/common/blog-cover.jpg) ">
     <div class="inner">
         <nav class="site-nav">
     <!-- <div class="site-nav-left"> -->
         
             
-                <a class="site-nav-logo mx-auto" href="/blog/"><img src="/blog/assets/images/blog-icon.png" alt="Rdyx Blog" /></a>
+                <a class="site-nav-logo mx-auto" href="/blog/"><img src="/blog/assets/images/common/blog-icon.png" alt="Rdyx Blog" /></a>
             
         
         
@@ -159,7 +156,7 @@ into the {body} of the default.hbs template -->
  RdyxTV</a>
       
       
-        <a class="dropdown-item social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/github-logo.png" alt="github"/> Rdyx</a>
+        <a class="dropdown-item social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/> Rdyx</a>
       
     </div>
   </li>
@@ -173,7 +170,7 @@ into the {body} of the default.hbs template -->
 </a>
     
     
-      <a class="social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/github-logo.png" alt="github"/></a>
+      <a class="social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/></a>
     
   </div>
   <li class="nav-search mb-3 mb-sm-0">
@@ -238,7 +235,7 @@ into the {body} of the default.hbs template -->
 </svg>
 </span>
       </div>
-      <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.." aria-describedby="basic-addon1">
+      <input type="text" id="search-input" class="form-control" placeholder="Rechercher des articles..." aria-describedby="basic-addon1">
     </div>
     <ul id="results-container" class="dropdown-menu show"></ul>
     </li>
@@ -395,7 +392,7 @@ Novembre
     <div class="floating-header-logo">
         <a href="/blog/">
             
-                <img src="/blog/assets/images/favicon.png" alt="Rdyx Blog icon" />
+                <img src="/blog/assets/images/common/favicon.png" alt="Rdyx Blog icon" />
             
             <span>Rdyx Blog</span>
         </a>
@@ -656,7 +653,8 @@ Novembre
                 <a class="dropdown-item search-link" href="{url}">\
                     <span>{title}</span> <small>{tags}</small>\
                 </a>\
-            </li>'
+            </li>',
+            noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
         });
     </script>
 </body>

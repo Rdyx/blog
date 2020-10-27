@@ -21,10 +21,7 @@
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Encode Sans', sans-serif; }
-      </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
 
     <!--[if IE]>
         <style>
@@ -39,7 +36,7 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="" />
-    <link rel="shortcut icon" href="/blog/assets/images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/blog/" type="image/png" />
     <link rel="canonical" href="/blog/tag/speeches/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -49,13 +46,13 @@
     <meta property="og:title" content="Speeches - Rdyx Blog" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="/blog/tag/speeches/" />
-    <meta property="og:image" content="/blog/assets/images/blog-cover.jpg" />
+    <meta property="og:image" content="/blog/assets/images/common/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/RdyxTV" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Speeches - Rdyx Blog" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:url" content="/blog/" />
-    <meta name="twitter:image" content="/blog/assets/images/blog-cover.jpg" />
+    <meta name="twitter:image" content="/blog/assets/images/common/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Rdyx Blog" />
     <meta name="twitter:site" content="@RdyxTV" />
@@ -70,12 +67,12 @@
     "publisher": {
         "@type": "Organization",
         "name": "Rdyx Blog",
-        "logo": "/blog/assets/images/blog-icon.png"
+        "logo": "/blog/assets/images/common/blog-icon.png"
     },
     "url": "/blog/tag/speeches/",
     "image": {
         "@type": "ImageObject",
-        "url": "/blog/assets/images/blog-cover.jpg",
+        "url": "/blog/assets/images/common/blog-cover.jpg",
         "width": 2000,
         "height": 666
     },
@@ -119,7 +116,7 @@
     <!-- <div class="site-nav-left"> -->
         
             
-                <a class="site-nav-logo mx-auto" href="/blog/"><img src="/blog/assets/images/blog-icon.png" alt="Rdyx Blog" /></a>
+                <a class="site-nav-logo mx-auto" href="/blog/"><img src="/blog/assets/images/common/blog-icon.png" alt="Rdyx Blog" /></a>
             
         
         
@@ -160,7 +157,7 @@
  RdyxTV</a>
       
       
-        <a class="dropdown-item social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/github-logo.png" alt="github"/> Rdyx</a>
+        <a class="dropdown-item social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/> Rdyx</a>
       
     </div>
   </li>
@@ -174,7 +171,7 @@
 </a>
     
     
-      <a class="social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/github-logo.png" alt="github"/></a>
+      <a class="social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/></a>
     
   </div>
   <li class="nav-search mb-3 mb-sm-0">
@@ -239,7 +236,7 @@
 </svg>
 </span>
       </div>
-      <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.." aria-describedby="basic-addon1">
+      <input type="text" id="search-input" class="form-control" placeholder="Rechercher des articles..." aria-describedby="basic-addon1">
     </div>
     <ul id="results-container" class="dropdown-menu show"></ul>
     </li>
@@ -477,7 +474,8 @@
                 <a class="dropdown-item search-link" href="{url}">\
                     <span>{title}</span> <small>{tags}</small>\
                 </a>\
-            </li>'
+            </li>',
+            noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
         });
     </script>
 </body>
