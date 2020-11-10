@@ -126,7 +126,7 @@
         <loc>/looking-glass-house</loc>
         
         
-        <lastmod>1871-03-18T11:18:00+01:00</lastmod>
+        <lastmod>1871-03-18T10:28:03+00:09</lastmod>
         <changefreq>weekly</changefreq>
       </url>
     
@@ -136,7 +136,7 @@
         <loc>/down-the-rabbit-hole</loc>
         
         
-        <lastmod>1865-11-26T11:18:00+01:00</lastmod>
+        <lastmod>1865-11-26T10:28:03+00:09</lastmod>
         <changefreq>weekly</changefreq>
       </url>
     
@@ -146,7 +146,7 @@
         <loc>/gettysburg-address</loc>
         
         
-        <lastmod>1863-11-19T11:18:00+01:00</lastmod>
+        <lastmod>1863-11-19T10:28:03+00:09</lastmod>
         <changefreq>weekly</changefreq>
       </url>
     
@@ -181,6 +181,15 @@
   
     
       <url>
+        <loc>/about/</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
         <loc>/posts-list-by-date/</loc>
         
         
@@ -199,15 +208,6 @@
   
     
       <url>
-        <loc>/about/</loc>
-        
-        
-        <changefreq>weekly</changefreq>
-      </url>
-    
-  
-    
-      <url>
         <loc>/search.json</loc>
         
         
@@ -218,6 +218,24 @@
     
       <url>
         <loc>/sitemaps.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/author/rdyx/feed.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/author/rdyx/</loc>
         
         
         <changefreq>weekly</changefreq>
@@ -308,24 +326,6 @@
     
       <url>
         <loc>/tag/test/</loc>
-        
-        
-        <changefreq>weekly</changefreq>
-      </url>
-    
-  
-    
-      <url>
-        <loc>/author/rdyx/feed.xml</loc>
-        
-        
-        <changefreq>weekly</changefreq>
-      </url>
-    
-  
-    
-      <url>
-        <loc>/author/rdyx/</loc>
         
         
         <changefreq>weekly</changefreq>
