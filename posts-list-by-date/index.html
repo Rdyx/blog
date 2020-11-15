@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 
     <!-- Document Settings -->
@@ -112,14 +112,14 @@ into the {body} of the default.hbs template -->
     <!-- <div class="site-nav-left"> -->
         
             
-                <a class="site-nav-logo mx-auto" href="/blog/"><img src="/blog/assets/images/common/blog-icon.png" alt="Rdyx Blog" /></a>
+                <a class="site-nav-logo ml-0 my-auto" href="/blog/"><img src="/blog/assets/images/common/blog-icon.png" alt="Rdyx Blog" /></a>
             
         
         
             <ul class="nav" role="menu">
   <li class="nav-home" role="menuitem"><a href="/blog/">Accueil</a></li>
   <li class="nav-dropdown" role="menuitem">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="dropdown-toggle" aria-label="social-links" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Thèmes
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -141,9 +141,13 @@ into the {body} of the default.hbs template -->
   </li>
   <li class="nav-about" role="menuitem"><a href="/blog/about/">A propos</a></li>
   <li class="nav-social-links d-block d-sm-none" role="menuitem">
-    <a class="dropdown-toggle social-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.5 11.957c0 6.375-5.163 11.544-11.532 11.544C5.599 23.5.5 18.125.5 11.75.5 5.542 5.37.758 11.505.511l.5-.011C18.374.5 23.5 5.582 23.5 11.957zM11.505.511c-6 6.5-6 14.98 0 22.98m1-22.98c6 6.5 6 14.977 0 22.977M2 17.479h20.063m-19.657-12h19.062m-20.968 6h22.938" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></svg>
+    <a class="dropdown-toggle social-link" aria-label="social-links" href="#" role="button" id="dropdownMenuLinkXs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle id="twitch-status" class="red-circle" cx="50" cy="50" r="25"/>
+  </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.5 11.957c0 6.375-5.163 11.544-11.532 11.544C5.599 23.5.5 18.125.5 11.75.5 5.542 5.37.758 11.505.511l.5-.011C18.374.5 23.5 5.582 23.5 11.957zM11.505.511c-6 6.5-6 14.98 0 22.98m1-22.98c6 6.5 6 14.977 0 22.977M2 17.479h20.063m-19.657-12h19.062m-20.968 6h22.938" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></svg>
 </a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkXs">
       
         <a class="dropdown-item social-link social-link-fb" href="https://facebook.com/RdyxTV" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
  RdyxTV</a>
@@ -155,9 +159,22 @@ into the {body} of the default.hbs template -->
       
         <a class="dropdown-item social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/> Rdyx</a>
       
+      
+        <a class="dropdown-item social-link" href="https://twitch.tv/Rdyx" target="_blank" rel="noopener"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="twitch-logo" viewBox="0 0 256 268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+    <g>
+        <path d="M17.4579119,0 L0,46.5559188 L0,232.757287 L63.9826001,232.757287 L63.9826001,267.690956 L98.9144853,267.690956 L133.811571,232.757287 L186.171922,232.757287 L256,162.954193 L256,0 L17.4579119,0 Z M40.7166868,23.2632364 L232.73141,23.2632364 L232.73141,151.29179 L191.992415,192.033461 L128,192.033461 L93.11273,226.918947 L93.11273,192.033461 L40.7166868,192.033461 L40.7166868,23.2632364 Z M104.724985,139.668381 L127.999822,139.668381 L127.999822,69.843872 L104.724985,69.843872 L104.724985,139.668381 Z M168.721862,139.668381 L191.992237,139.668381 L191.992237,69.843872 L168.721862,69.843872 L168.721862,139.668381 Z" fill="#FFFFFF"></path>
+    </g>
+</svg>
+
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle id="twitch-status" class="red-circle" cx="50" cy="50" r="25"/>
+  </svg>
+ Rdyx</a>
+      
     </div>
   </li>
-  <div class="social-links d-none d-sm-flex">
+  <li class="social-links d-none d-sm-flex">
     
       <a class="social-link social-link-fb" href="https://facebook.com/RdyxTV" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 </a>
@@ -169,11 +186,24 @@ into the {body} of the default.hbs template -->
     
       <a class="social-link" href="https://github.com/Rdyx" target="_blank" rel="noopener"><img class="github-logo" src="/blog//assets/images/common/github-logo.png" alt="github"/></a>
     
-  </div>
+    
+      <a class="social-link" href="https://twitch.tv/Rdyx" target="_blank" rel="noopener"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="twitch-logo" viewBox="0 0 256 268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+    <g>
+        <path d="M17.4579119,0 L0,46.5559188 L0,232.757287 L63.9826001,232.757287 L63.9826001,267.690956 L98.9144853,267.690956 L133.811571,232.757287 L186.171922,232.757287 L256,162.954193 L256,0 L17.4579119,0 Z M40.7166868,23.2632364 L232.73141,23.2632364 L232.73141,151.29179 L191.992415,192.033461 L128,192.033461 L93.11273,226.918947 L93.11273,192.033461 L40.7166868,192.033461 L40.7166868,23.2632364 Z M104.724985,139.668381 L127.999822,139.668381 L127.999822,69.843872 L104.724985,69.843872 L104.724985,139.668381 Z M168.721862,139.668381 L191.992237,139.668381 L191.992237,69.843872 L168.721862,69.843872 L168.721862,139.668381 Z" fill="#FFFFFF"></path>
+    </g>
+</svg>
+
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle id="twitch-status" class="red-circle" cx="50" cy="50" r="25"/>
+  </svg>
+</a>
+    
+  </li>
   <li class="nav-search mb-3 mb-sm-0">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1"><?xml version="1.0" encoding="iso-8859-1"?>
+        <label class="input-group-text" id="basic-addon1" for="search-input"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" class="magnifying-glass" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 470 470" style="enable-background:new 0 0 470 470;" xml:space="preserve">
@@ -230,12 +260,12 @@ into the {body} of the default.hbs template -->
 <g>
 </g>
 </svg>
-</span>
+</label>
       </div>
       <input type="text" id="search-input" class="form-control" placeholder="Rechercher des articles..." aria-describedby="basic-addon1">
     </div>
     <ul id="results-container" class="dropdown-menu show"></ul>
-    </li>
+  </li>
 </ul>
 
         
@@ -717,6 +747,7 @@ into the {body} of the default.hbs template -->
                     <a href="https://facebook.com/RdyxTV" target="_blank" rel="noopener">Facebook</a>
                     <a href="https://twitter.com/RdyxTV" target="_blank" rel="noopener">Twitter</a>
                     <a href="https://github.com/Rdyx" target="_blank" rel="noopener">Github</a>
+                    <a href="https://twitch.tv/Rdyx" target="_blank" rel="noopener">Twitch</a>
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
             </div>
@@ -925,10 +956,16 @@ into the {body} of the default.hbs template -->
             searchResultTemplate: '<li>\
                 <a class="dropdown-item search-link" href="{url}">\
                     <span>{title}</span> <small>{tags}</small>\
-                </a>\
-            </li>',
-            noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
-        });
+                    </a>\
+                    </li>',
+                    noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
+                });
+                </script>
+
+    <!-- Twitch tracker to know if streamer is online -->
+    <script type="text/javascript">
+        const streamerUserLogin = "Rdyx" // Setting here to pass it to next script
     </script>
+    <script type="text/javascript" src="/blog/assets/js/twitch-tracker.js"></script>
 </body>
 </html>

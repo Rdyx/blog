@@ -10,6 +10,8 @@
   --transparent-dark-bg: rgba(0,0,0,0.7);
   --background-dark-grey: #111;
   --lightgrey: #c5d2d9;
+  --red: rgba(255,0,0,1);
+  --green: rgba(0,255,0,1);
 }
 
 @font-face {
@@ -74,7 +76,7 @@ figure .toolbar-item,
   font-family: 'Ruda', sans-serif;
 }
 
-/* Code blocks  */
+/* Code blocks font */
 /* ---------- */
 div.code-toolbar,
 code,
@@ -87,8 +89,9 @@ pre[class*="language-"],
   font-family: 'JetBrainsMono', sans-serif;
 }
 /* ---------- */
-/* ---------- */
 
+/* General */
+/* ---------- */
 body, html {
   background-color: var(--background-grey);
   color: var(--white) !important;
@@ -203,6 +206,23 @@ figure.image figcaption {
 
 #subscribe button, .subscribe-form button {
   background: linear-gradient(var(--yellow-link), var(--yellow-link-hover));
+}
+
+.red-circle {
+  fill: var(--red);
+}
+
+.green-circle {
+  fill: var(--green);
+}
+
+.blink-circle {
+  animation: blinker 2s step-start infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0.6;
+  }
 }
 
 /* Code blocks */
@@ -326,7 +346,7 @@ nav #search-input {
   border: 1px solid var(--white);
   background-color: transparent;
   padding: 0 1rem;
-  min-width: 180px;
+  min-width: 150px;
   height: 25px;
   align-self: center;
   opacity: 0.8;
