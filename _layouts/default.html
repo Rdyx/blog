@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 
     <!-- Document Settings -->
@@ -69,6 +69,7 @@
                     {% if site.facebook %}<a href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
                     {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
                     {% if site.github %}<a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">Github</a>{% endif %}
+                    {% if site.twitch %}<a href="https://twitch.tv/{{ site.twitch }}" target="_blank" rel="noopener">Twitch</a>{% endif %}
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
             </div>
@@ -147,10 +148,16 @@
             searchResultTemplate: '<li>\
                 <a class="dropdown-item search-link" href="{{ site.url }}{url}">\
                     <span>{title}</span> <small>{tags}</small>\
-                </a>\
-            </li>',
-            noResultsText: '<li><span class="text-white ml-3">{{ site.data.languages.fr["default-layout"].no-search-result }}</span></li>'
-        });
+                    </a>\
+                    </li>',
+                    noResultsText: '<li><span class="text-white ml-3">{{ site.data.languages.fr["default-layout"].no-search-result }}</span></li>'
+                });
+                </script>
+
+    <!-- Twitch tracker to know if streamer is online -->
+    <script type="text/javascript">
+        const streamerUserLogin = "{{ site.twitch }}" // Setting here to pass it to next script
     </script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/twitch-tracker.js"></script>
 </body>
 </html>

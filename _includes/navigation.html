@@ -1,7 +1,7 @@
 <ul class="nav" role="menu">
   <li class="nav-home" role="menuitem"><a href="{{ site.baseurl }}/">{{ site.data.languages.fr["navigation"].home }}</a></li>
   <li class="nav-dropdown" role="menuitem">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="dropdown-toggle" aria-label="social-links" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{ site.data.languages.fr["navigation"].tags }}
     </a>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -15,8 +15,8 @@
   </li>
   <li class="nav-about" role="menuitem"><a href="{{ site.baseurl }}/about/">{{ site.data.languages.fr["navigation"].about }}</a></li>
   <li class="nav-social-links d-block d-sm-none" role="menuitem">
-    <a class="dropdown-toggle social-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% include website.html %}</a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-toggle social-link" aria-label="social-links" href="#" role="button" id="dropdownMenuLinkXs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% include twitch-status-circle.html %} {% include website.html %}</a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkXs">
       {% if site.facebook %}
         <a class="dropdown-item social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %} {{ site.facebook }}</a>
       {% endif %}
@@ -26,9 +26,12 @@
       {% if site.github %}
         <a class="dropdown-item social-link" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %} {{ site.github }}</a>
       {% endif %}
+      {% if site.twitch %}
+        <a class="dropdown-item social-link" href="https://twitch.tv/{{ site.twitch }}" target="_blank" rel="noopener">{% include twitch.html %} {{ site.twitch }}</a>
+      {% endif %}
     </div>
   </li>
-  <div class="social-links d-none d-sm-flex">
+  <li class="social-links d-none d-sm-flex">
     {% if site.facebook %}
       <a class="social-link social-link-fb" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">{% include facebook.html %}</a>
     {% endif %}
@@ -38,14 +41,17 @@
     {% if site.github %}
       <a class="social-link" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %}</a>
     {% endif %}
-  </div>
+    {% if site.twitch %}
+      <a class="social-link" href="https://twitch.tv/{{ site.twitch }}" target="_blank" rel="noopener">{% include twitch.html %}</a>
+    {% endif %}
+  </li>
   <li class="nav-search mb-3 mb-sm-0">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">{% include magnifying-glass.svg %}</span>
+        <label class="input-group-text" id="basic-addon1" for="search-input">{% include magnifying-glass.svg %}</label>
       </div>
       <input type="text" id="search-input" class="form-control" placeholder="{{ site.data.languages.fr['navigation'].search-placeholder }}" aria-describedby="basic-addon1">
     </div>
     <ul id="results-container" class="dropdown-menu show"></ul>
-    </li>
+  </li>
 </ul>
