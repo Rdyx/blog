@@ -164,7 +164,7 @@
     </script>
 
     <script type="text/javascript">
-        const baseUrl = '{{ site.baseurl }}';
+        const baseUrl = window.origin + '{{ site.baseurl }}';
         updateHitCounterText(baseUrl, 'total-hits-counter');
     </script>
 
