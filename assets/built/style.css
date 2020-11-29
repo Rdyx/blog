@@ -76,6 +76,10 @@ figure .toolbar-item,
   font-family: 'Ruda', sans-serif;
 }
 
+.normal-img {
+  width: auto !important;
+}
+
 /* Code blocks font */
 /* ---------- */
 div.code-toolbar,

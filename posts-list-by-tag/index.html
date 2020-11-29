@@ -21,7 +21,8 @@
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
+    <!-- Loading jquery early -->
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.5.1.js"></script>
 
     <!--[if IE]>
         <style>
@@ -126,16 +127,6 @@ into the {body} of the default.hbs template -->
       <a id="all-posts-by-tag" class="dropdown-item" href="/blog/posts-list-by-tag">Tous les articles par thème</a>
       <a id="all-posts-by-date" class="dropdown-item" href="/blog/posts-list-by-date">Tous les articles par date</a>
       <div class="dropdown-divider"></div>
-      
-        <a id="fiction" class="dropdown-item" href="/blog/tag/fiction">fiction</a>
-      
-        <a id="speeches" class="dropdown-item" href="/blog/tag/speeches">speeches</a>
-      
-        <a id="fables" class="dropdown-item" href="/blog/tag/fables">fables</a>
-      
-        <a id="getting-started" class="dropdown-item" href="/blog/tag/getting-started">Getting started</a>
-      
-        <a id="test" class="dropdown-item" href="/blog/tag/test">test</a>
       
     </div>
   </li>
@@ -303,6 +294,8 @@ into the {body} of the default.hbs template -->
 
 </time>
                     
+                    <span class="date-divider">/</span>
+                    <span>Lectures: <span id="post-hits-counter"></span></span>
                 </section>
                 <h1 class="post-full-title">Liste de tous les articles par thème</h1>
                 
@@ -317,246 +310,6 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <!-- Due to the page being specific, style will be defined directly here -->
 <!-- Ordering tags -->
-
-<h6>GETTING STARTED</h6>
-<ul class="list-unstyled" style="margin-bottom: 3rem;">
-    
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/advanced-markdown"><strong>Advanced Markdown tips</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/private-sites"><strong>Making your site private</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/managing-users"><strong>Managing Ghost users</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/using-tags"><strong>Organising your content with tags</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/themes"><strong>Setting up your own Ghost theme</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/the-editor"><strong>Using the Ghost editor</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/welcome"><strong>Welcome to Ghost</strong></a> - 
-        <i>
-          <small>
-            
-              
-28
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-  </ul>
-
-<h6>FABLES</h6>
-<ul class="list-unstyled" style="margin-bottom: 3rem;">
-    
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/the-businessman-and-fisherman"><strong>The Businessman &amp; The Fisherman</strong></a> - 
-        <i>
-          <small>
-            
-              
-12
-Août
-  
-2014
-            
-          </small>
-        </i>
-      </li>
-    
-  </ul>
-
-<h6>FICTION</h6>
-<ul class="list-unstyled" style="margin-bottom: 3rem;">
-    
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/down-the-rabbit-hole"><strong>Down The Rabbit Hole</strong></a> - 
-        <i>
-          <small>
-            
-              
-26
-Novembre
-  
-1865
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/looking-glass-house"><strong>Looking-Glass house</strong></a> - 
-        <i>
-          <small>
-            
-              
-18
-Mars
-  
-1871
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/out-to-sea"><strong>Out to Sea</strong></a> - 
-        <i>
-          <small>
-            
-              
-24
-Juillet
-  
-1912
-            
-          </small>
-        </i>
-      </li>
-    
-  </ul>
-
-<h6>SPEECHES</h6>
-<ul class="list-unstyled" style="margin-bottom: 3rem;">
-    
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/i-have-a-dream"><strong>I Have a Dream</strong></a> - 
-        <i>
-          <small>
-            
-              
-28
-Août
-  
-1963
-            
-          </small>
-        </i>
-      </li>
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/the-purpose-of-education"><strong>The Purpose of Education</strong></a> - 
-        <i>
-          <small>
-            
-              
-12
-Décembre
-
-1948
-            
-          </small>
-        </i>
-      </li>
-    
-  </ul>
-
-<h6>TEST</h6>
-<ul class="list-unstyled" style="margin-bottom: 3rem;">
-    
-    
-      <li style="padding-left: 1.5rem;">
-        <a href="/blog/advanced-markdown"><strong>Advanced Markdown tips</strong></a> - 
-        <i>
-          <small>
-            
-              
-27
-Juillet
-  
-2017
-            
-          </small>
-        </i>
-      </li>
-    
-  </ul>
 
 
                 </div>
@@ -640,16 +393,20 @@ Juillet
 
 <!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
 
-
         <!-- Previous/next page links - displayed on every page -->
         
 
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="/blog/">Rdyx Blog</a> &copy; 2020</section>
+                <nav class="site-footer-nav copyright">
+                    <a href="/blog/">Rdyx Blog</a> &copy;2020
+                    <a href="https://github.com/brentvollebregt/hit-counter">
+                        Visites: <span id="total-hits-counter">1</span>
+                    </a>
+                </nav>
                 <section class="poweredby">Créé avec <a href="https://jekyllrb.com/">Jekyll</a>,
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a> &
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
                 </section>
                 <nav class="site-footer-nav">
@@ -660,6 +417,8 @@ Juillet
                     <a href="https://twitch.tv/Rdyx" target="_blank" rel="noopener">Twitch</a>
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
+                <!-- Hidden but still counting, only shown in about page -->
+                <section class="hidden"><img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frdyx.github.io%2Fblog%2F" alt="Hits"></section>
             </div>
         </footer>
 
@@ -667,8 +426,6 @@ Juillet
 
     <!-- The big email subscribe modal content -->
     
-
-    <script type="text/javascript" src="/blog/assets/js/jquery-3.5.1.js"></script>
 
     <script type="text/javascript" src="/blog/assets/js/prism.js"></script>
     <!-- Line numbers for code blocks -->
@@ -695,6 +452,9 @@ Juillet
     <!-- /endif -->
 
     
+
+    <!-- Common functions for multiple templates-->
+    <script type="text/javascript" src="/blog/assets/js/common.js"></script>
 
 
     <!-- Add Google Analytics  -->
@@ -851,6 +611,10 @@ Juillet
         
         update();
     });
+
+    // Post hits counter
+    const postUrl = window.location.href;
+    updateHitCounterText(postUrl, 'post-hits-counter');
 </script>
     
 
@@ -870,7 +634,12 @@ Juillet
                     </li>',
                     noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
                 });
-                </script>
+    </script>
+
+    <script type="text/javascript">
+        const baseUrl = '/blog';
+        updateHitCounterText(baseUrl, 'total-hits-counter');
+    </script>
 
     <!-- Twitch tracker to know if streamer is online -->
     <script type="text/javascript">
