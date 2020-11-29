@@ -14,6 +14,6 @@ function replaceTextInElementById(elementId, text){
  */
 function updateHitCounterText(url, elementId) {
   return $.ajax('https://hitcounter.pythonanywhere.com/count',{data:{url: url}}).then(hitCount => {
-    replaceTextInElementById(elementId, hitCount)
+    replaceTextInElementById(elementId, hitCount);
   });
 };
