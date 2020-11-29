@@ -7,4 +7,4 @@ cd ./blog-prod/
 # Assuming you have set an upstream branch in blog folder
 git add *
 git commit -m "Update"
-git push origin
+git push origin -f
