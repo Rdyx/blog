@@ -21,7 +21,8 @@
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="/blog/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
+    <!-- Loading jquery early -->
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.5.1.js"></script>
 
     <!--[if IE]>
         <style>
@@ -131,15 +132,7 @@
       <a id="all-posts-by-date" class="dropdown-item" href="/blog/posts-list-by-date">Tous les articles par date</a>
       <div class="dropdown-divider"></div>
       
-        <a id="fiction" class="dropdown-item" href="/blog/tag/fiction">fiction</a>
-      
-        <a id="speeches" class="dropdown-item" href="/blog/tag/speeches">speeches</a>
-      
-        <a id="fables" class="dropdown-item" href="/blog/tag/fables">fables</a>
-      
         <a id="getting-started" class="dropdown-item" href="/blog/tag/getting-started">Getting started</a>
-      
-        <a id="test" class="dropdown-item" href="/blog/tag/test">test</a>
       
     </div>
   </li>
@@ -294,7 +287,7 @@
                 <h1 class="site-title">Getting Started</h1>
                 <h2 class="site-description">
                     
-                        7 article(s) sur ce thème
+                        1 article(s) sur ce thème
                     
                 </h2>
             </div>
@@ -314,7 +307,7 @@
 
     <article class="post-card tag-template">
         
-            <a class="post-card-image-link" href="/blog/welcome">
+            <a class="post-card-image-link" href="/blog/test">
                 <div class="post-card-image" style="background-image: url(/blog/assets/images/welcome.jpg)"></div>
             </a>
         
@@ -334,327 +327,13 @@
                     </header>
                 </div>
                 <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/welcome">
+                    <a class="post-card-content-text-link" href="/blog/test">
                         <header class="post-card-header">
-                            <h2 class="post-card-title">Welcome to Ghost</h2>
+                            <h2 class="post-card-title">Welcome to Ghostz</h2>
                         </header>
                         <section class="post-card-excerpt">
                             
-                                <p>
-...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~1 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/the-editor">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/writing.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/getting-started">
-                                        <span>Getting started</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/the-editor">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Using the Ghost editor</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>Ghost uses a language called Markdown to format text. When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~3 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/using-tags">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/tags.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/getting-started">
-                                        <span>Getting started</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/using-tags">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Organising your content with tags</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>Ghost has a single, powerful organisational taxonomy, called tags. It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~2 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/managing-users">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/team.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/getting-started">
-                                        <span>Getting started</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/managing-users">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Managing Ghost users</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~1 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/private-sites">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/locked.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/getting-started">
-                                        <span>Getting started</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/private-sites">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Making your site private</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~1 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/advanced-markdown">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/advanced.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                <a class="post-card-tags" href="/blog/tag/getting-started">
-                                    <span class="post-card-tags">Getting started</span>
-                                </a>
-                                
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/test">
-                                        <span>Test</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/advanced-markdown">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Advanced Markdown tips</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>There are lots of powerful things you can do with the Ghost editor If you've gotten pretty comfortable with all the basics of writing in Ghost, then you may enjoy some more advanced...</p>
-                            
-                        </section>
-                    </a>
-                </div>
-            </div>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/blog/assets/images/authors/rdyx-profile-image.jpg" alt="Rdyx" />
-                        
-                        <span class="post-card-author">
-                            <a href="/blog/author/rdyx/">Rdyx</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                        ~2 min de lecture
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-
-
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/blog/themes">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/design.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <div>
-                <div class="post-card-content-link">
-                    <header class="post-card-header">
-                        
-                            
-                                
-                                    <a class="post-card-tags" href="/blog/tag/getting-started">
-                                        <span>Getting started</span>
-                                    </a>
-                                
-                            
-                        
-                    </header>
-                </div>
-                <div class="post-card-content-text">
-                    <a class="post-card-content-text-link" href="/blog/themes">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">Setting up your own Ghost theme</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            
-                                <p>Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for...</p>
+                                <p>...</p>
                             
                         </section>
                     </a>
@@ -687,9 +366,14 @@
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="/blog/">Rdyx Blog</a> &copy; 2020</section>
+                <nav class="site-footer-nav copyright">
+                    <a href="/blog/">Rdyx Blog</a> &copy;2020
+                    <a href="https://github.com/brentvollebregt/hit-counter">
+                        Visites: <span id="total-hits-counter">1</span>
+                    </a>
+                </nav>
                 <section class="poweredby">Créé avec <a href="https://jekyllrb.com/">Jekyll</a>,
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a> &
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
                 </section>
                 <nav class="site-footer-nav">
@@ -700,6 +384,8 @@
                     <a href="https://twitch.tv/Rdyx" target="_blank" rel="noopener">Twitch</a>
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
+                <!-- Hidden but still counting, only shown in about page -->
+                <section class="hidden"><img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frdyx.github.io%2Fblog%2F" alt="Hits"></section>
             </div>
         </footer>
 
@@ -707,8 +393,6 @@
 
     <!-- The big email subscribe modal content -->
     
-
-    <script type="text/javascript" src="/blog/assets/js/jquery-3.5.1.js"></script>
 
     <script type="text/javascript" src="/blog/assets/js/prism.js"></script>
     <!-- Line numbers for code blocks -->
@@ -735,6 +419,9 @@
     <!-- /endif -->
 
     
+
+    <!-- Common functions for multiple templates-->
+    <script type="text/javascript" src="/blog/assets/js/common.js"></script>
 
 
     <!-- Add Google Analytics  -->
@@ -770,7 +457,12 @@
                     </li>',
                     noResultsText: '<li><span class="text-white ml-3">Aucun résultat</span></li>'
                 });
-                </script>
+    </script>
+
+    <script type="text/javascript">
+        const baseUrl = window.origin + '/blog';
+        updateHitCounterText(baseUrl, 'total-hits-counter');
+    </script>
 
     <!-- Twitch tracker to know if streamer is online -->
     <script type="text/javascript">

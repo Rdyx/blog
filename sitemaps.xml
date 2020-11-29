@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
+    
+      <url>
+        <loc>/test</loc>
+        
+        
+        <lastmod>2020-11-30T00:00:00+01:00</lastmod>
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
   
     
       <url>
@@ -68,6 +78,24 @@
     
       <url>
         <loc>/sitemaps.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/tag/getting-started/feed.xml</loc>
+        
+        
+        <changefreq>weekly</changefreq>
+      </url>
+    
+  
+    
+      <url>
+        <loc>/tag/getting-started/</loc>
         
         
         <changefreq>weekly</changefreq>

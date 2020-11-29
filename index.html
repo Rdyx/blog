@@ -132,6 +132,8 @@ into the {body} of the default.hbs template -->
       <a id="all-posts-by-date" class="dropdown-item" href="/blog/posts-list-by-date">Tous les articles par date</a>
       <div class="dropdown-divider"></div>
       
+        <a id="getting-started" class="dropdown-item" href="/blog/tag/getting-started">Getting started</a>
+      
     </div>
   </li>
   <li class="nav-about" role="menuitem"><a href="/blog/about/">A propos</a></li>
@@ -293,6 +295,56 @@ into the {body} of the default.hbs template -->
 
 
 
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/blog/test">
+                <div class="post-card-image" style="background-image: url(/blog/assets/images/welcome.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <div>
+                <div class="post-card-content-link">
+                    <header class="post-card-header">
+                        
+                            
+                                
+                                    <a class="post-card-tags" href="/blog/tag/getting-started">
+                                        <span>Getting started</span>
+                                    </a>
+                                
+                            
+                        
+                    </header>
+                </div>
+                <div class="post-card-content-text">
+                    <a class="post-card-content-text-link" href="/blog/test">
+                        <header class="post-card-header">
+                            <h2 class="post-card-title">Welcome to Ghostz</h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                                <p>...</p>
+                            
+                        </section>
+                    </a>
+                </div>
+            </div>
+            <footer class="post-card-meta">
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                        ~1 min de lecture
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+
+
         </div>
 
     </div>
@@ -352,7 +404,7 @@ into the {body} of the default.hbs template -->
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('');
+        var maxPages = parseInt('1');
     </script>
     <script src="/blog/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
