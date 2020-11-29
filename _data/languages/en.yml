@@ -5,6 +5,7 @@ default-layout:
   subscribe-to: "Subscribe to"
   subscribe-text: "Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox"
   no-search-result: "No results found"
+  hits: Hits
 
 error-layout:
   not-found: "Oops! Page not found..."
@@ -20,6 +21,7 @@ post-layout:
   card-more-post-text: "Read more articles with this tag"
   card-no-more-post-text: "No more article about this tag"
   toc-content-text: "Contents"
+  readings: "Readings"
 
 tag-layout:
   default-tag-text: "post(s) with this tag"

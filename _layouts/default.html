@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/prism.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Ruda:wght@500&display=swap" rel="stylesheet">
+    <!-- Loading jquery early -->
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.5.1.js"></script>
 
     <!--[if IE]>
         <style>
@@ -59,9 +60,14 @@
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
+                <nav class="site-footer-nav copyright">
+                    <a href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a> &copy;{{  site.time | date: '%Y' }}
+                    <a href="https://github.com/brentvollebregt/hit-counter">
+                        {{ site.data.languages.fr["default-layout"].hits }}: <span id="total-hits-counter">1</span>
+                    </a>
+                </nav>
                 <section class="poweredby">{{ site.data.languages.fr["default-layout"].powered-by }} <a href="https://jekyllrb.com/">Jekyll</a>,
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a> &
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a>
                 </section>
                 <nav class="site-footer-nav">
@@ -72,6 +78,8 @@
                     {% if site.twitch %}<a href="https://twitch.tv/{{ site.twitch }}" target="_blank" rel="noopener">Twitch</a>{% endif %}
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
+                <!-- Hidden but still counting, only shown in about page -->
+                <section class="hidden"><img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frdyx.github.io%2Fblog%2F" alt="Hits"></section>
             </div>
         </footer>
 
@@ -91,8 +99,6 @@
             </div>
         </div>
     {% endif %}
-
-    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.5.1.js"></script>
 
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/prism.js"></script>
     <!-- Line numbers for code blocks -->
@@ -125,6 +131,9 @@
     <script src="{{ site.baseurl }}/assets/js/infinitescroll.js"></script>
     {% endif %}
 
+    <!-- Common functions for multiple templates-->
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
+
 
     <!-- Add Google Analytics  -->
     {% include analytics.html %}
@@ -152,7 +161,12 @@
                     </li>',
                     noResultsText: '<li><span class="text-white ml-3">{{ site.data.languages.fr["default-layout"].no-search-result }}</span></li>'
                 });
-                </script>
+    </script>
+
+    <script type="text/javascript">
+        const baseUrl = '{{ site.baseurl }}';
+        updateHitCounterText(baseUrl, 'total-hits-counter');
+    </script>
 
     <!-- Twitch tracker to know if streamer is online -->
     <script type="text/javascript">

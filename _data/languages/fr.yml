@@ -5,6 +5,7 @@ default-layout:
   subscribe-to: "S'abonner à"
   subscribe-text: "Restez à jour ! Recevez les derniers posts de ce blog directement dans votre boîte mail"
   no-search-result: "Aucun résultat"
+  hits: Visites
 
 error-layout:
   not-found: "Oups! Page non trouvée..."
@@ -20,6 +21,7 @@ post-layout:
   card-more-post-text: "Lire plus d'articles sur ce thème"
   card-no-more-post-text: "Pas d'autre article sur ce thème"
   toc-content-text: "Sommaire"
+  readings: "Lectures"
 
 tag-layout:
   default-tag-text: "article(s) sur ce thème"
