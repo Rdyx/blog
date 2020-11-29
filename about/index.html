@@ -295,7 +295,10 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <ul id="markdown-toc">
-  <li><a href="#bienvenue-sur-rdyx-blog" id="markdown-toc-bienvenue-sur-rdyx-blog">Bienvenue sur Rdyx Blog!</a></li>
+  <li><a href="#bienvenue-sur-rdyx-blog" id="markdown-toc-bienvenue-sur-rdyx-blog">Bienvenue sur Rdyx Blog!</a>    <ul>
+      <li><a href="#en-vous-souhaitant-une-bonne-lecture-rdyx-" id="markdown-toc-en-vous-souhaitant-une-bonne-lecture-rdyx-">En vous souhaitant une bonne lecture, Rdyx ;)</a></li>
+    </ul>
+  </li>
 </ul>
 <h1 id="bienvenue-sur-rdyx-blog">Bienvenue sur Rdyx Blog!</h1>
 
@@ -322,15 +325,7 @@ into the {body} of the default.hbs template -->
   <li>Un gros travail de personnalisation (disposition html, modifications css et quelques scripts js).</li>
 </ul>
 
-<p>Ghost is professional publishing platform designed for modern journalism. This is a demo site of a basic Ghost install to give you a general sense of what a new Ghost site looks like when set up for the first time.</p>
-
-<blockquote>
-  <p>If you’d like to set up a site like this for yourself, head over to <a href="https://ghost.org/">Ghost.org</a> and start a free 14 day trial to give Ghost a try!</p>
-</blockquote>
-
-<p>If you’re a developer: Ghost is a completely open source (MIT) Node.js application built on a JSON API with an Ember.js admin client. It works with MySQL and SQLite, and is publicly available <a href="https://github.com/TryGhost/ghost">on Github</a>.</p>
-
-<p>If you need help with using Ghost, you’ll find a ton of useful articles on <a href="https://help.ghost.org/">our knowledgebase</a>, as well as extensive <a href="https://docs.ghost.org/">developer documentation</a>.</p>
+<h3 id="en-vous-souhaitant-une-bonne-lecture-rdyx-">En vous souhaitant une bonne lecture, Rdyx ;)</h3>
 
             </section>
 
@@ -459,7 +454,7 @@ $(function() {
     </script>
 
     <script type="text/javascript">
-        const baseUrl = '/blog';
+        const baseUrl = window.origin + '/blog';
         updateHitCounterText(baseUrl, 'total-hits-counter');
     </script>
 

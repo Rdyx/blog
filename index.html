@@ -399,7 +399,7 @@ into the {body} of the default.hbs template -->
     </script>
 
     <script type="text/javascript">
-        const baseUrl = '/blog';
+        const baseUrl = window.origin + '/blog';
         updateHitCounterText(baseUrl, 'total-hits-counter');
     </script>
 
