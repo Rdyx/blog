@@ -21,7 +21,8 @@ post-layout:
   card-more-post-text: "Read more articles with this tag"
   card-no-more-post-text: "No more article about this tag"
   toc-content-text: "Contents"
-  readings: "Readings"
+  views: "Viewed"
+  views-times: "times"
 
 tag-layout:
   default-tag-text: "post(s) with this tag"

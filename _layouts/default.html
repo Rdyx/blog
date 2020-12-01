@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/style.css" />
     <!-- Loading jquery early -->
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.5.1.js"></script>
+    <!-- Common functions for multiple templates-->
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
 
     <!--[if IE]>
         <style>
@@ -36,8 +38,7 @@
     {% include head.html %}
 
 </head>
-<body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
-
+<body id="body" class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
         {{ content }}
@@ -63,7 +64,7 @@
                 <nav class="site-footer-nav copyright">
                     <a href="{{ site.url }}{{ site.baseurl }}/">{{ site.title }}</a> &copy;{{  site.time | date: '%Y' }}
                     <a href="https://github.com/brentvollebregt/hit-counter">
-                        {{ site.data.languages.fr["default-layout"].hits }}: <span id="total-hits-counter">1</span>
+                        {{ site.data.languages.fr["default-layout"].hits }}: <span id="total-hits-counter">...</span>
                     </a>
                 </nav>
                 <section class="poweredby">{{ site.data.languages.fr["default-layout"].powered-by }} <a href="https://jekyllrb.com/">Jekyll</a>,
@@ -78,8 +79,6 @@
                     {% if site.twitch %}<a href="https://twitch.tv/{{ site.twitch }}" target="_blank" rel="noopener">Twitch</a>{% endif %}
                     <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
                 </nav>
-                <!-- Hidden but still counting, only shown in about page -->
-                <section class="hidden"><img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frdyx.github.io%2Fblog%2F" alt="Hits"></section>
             </div>
         </footer>
 
@@ -131,10 +130,6 @@
     <script src="{{ site.baseurl }}/assets/js/infinitescroll.js"></script>
     {% endif %}
 
-    <!-- Common functions for multiple templates-->
-    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
-
-
     <!-- Add Google Analytics  -->
     {% include analytics.html %}
 
@@ -163,9 +158,11 @@
                 });
     </script>
 
+    <!-- Hidden but still counting, only shown in about page -->
+    <!-- <img class="hidden" src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Frdyx.github.io%2Fblog%2F" alt="Hits"> -->
     <script type="text/javascript">
         const baseUrl = window.origin + '{{ site.baseurl }}';
-        updateHitCounterText(baseUrl, 'total-hits-counter');
+        updateHitCounterText(baseUrl, 'total-hits-counter', true);
     </script>
 
     <!-- Twitch tracker to know if streamer is online -->
