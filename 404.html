@@ -146,20 +146,32 @@ It's a good idea to keep this template as minimal as possible in terms of both f
                         </a>
                     </div>
                 </div>
-                <footer class="post-card-meta">
-                    
+                <footer class="post-card-meta d-flex">
+                    <div class="col px-0 my-auto">
                         
-                    
-                    <span class="reading-time">
+                            
                         
-                        
-                            ~1 min de lecture
-                        
+                    </div>
+                    <div class="reading-time col px-0 mx-0">
+                        <span class="row m-0 p-0 justify-content-end">
+                            Vu&nbsp;<span id="/test-hits-count">...</span>&nbsp;fois
+                        </span>
+                        <span class="row m-0 p-0 justify-content-end">
+                            
+                            
+                                ~1 min de lecture
+                            
                     </span>
                 </footer>
             </div>
         </article>
     
+
+    <script type="text/javascript">
+        postUrl = window.origin + '/blog/test';
+        updateHitCounterText(postUrl, '/test-hits-count');
+    </script>
+
 
 
                 </div>
