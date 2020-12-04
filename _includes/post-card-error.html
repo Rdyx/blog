@@ -75,8 +75,8 @@
     {% endif %}
 
     <script type="text/javascript">
-        postUrl = window.origin + '{{ site.baseurl }}/{{ post.url | remove_first: '/' }}';
-        updateHitCounterText(postUrl, '{{post.url}}-hits-count');
+        var postUrl = window.origin + '{{ site.baseurl }}/{{ post.url | remove_first: '/' }}';
+        updateHitCounterText(postUrl, '{{ post.url }}-hits-count');
     </script>
 
 {% endfor %}

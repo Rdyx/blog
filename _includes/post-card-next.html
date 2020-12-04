@@ -70,6 +70,6 @@
     </article>
 
     <script type="text/javascript">
-        postUrl = window.origin + '{{ site.baseurl }}/{{ page.next.url | remove_first: '/' }}';
+        var postUrl = window.origin + '{{ site.baseurl }}/{{ page.next.url | remove_first: '/' }}';
         updateHitCounterText(postUrl, '{{ page.next.url }}-hits-count');
     </script>
