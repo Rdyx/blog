@@ -1,16 +1,4 @@
 /**
- * Creates a dynamic hidden hitcount image
- * @param string hitCountDomain
- * @param string url
- */
-function createHitCounterImgElement(hitCountDomain, url) {
-  let imgElement = document.createElement('img');
-  imgElement.src = 'https://' + hitCountDomain + '.pythonanywhere.com/count/tag.svg?url=' + url;
-  imgElement.classList.add('hidden');
-  document.getElementById('body').appendChild(imgElement);
-}
-
-/**
  * Replace target element inner html
  * @param string elementId
  * @param string text
@@ -26,10 +14,12 @@ function replaceTextInElementById(elementId, text) {
  */
 function updateHitCounterText(url, elementId, count = false) {
   const hitCountDomain = 'rdyx';
+  const countUrl = count ? 'count' : 'nocount';
 
-  count && createHitCounterImgElement(hitCountDomain, url);
-
-  return $.ajax('https://' + hitCountDomain + '.pythonanywhere.com/nocount', { data: { url: url } }).then(
+  return $.ajax('https://' + hitCountDomain + '.pythonanywhere.com/' + countUrl, {
+    data: { url: url },
+    xhrFields: { withCredentials: true },
+  }).then(
     (hitCount) => {
       replaceTextInElementById(elementId, hitCount);
     }
